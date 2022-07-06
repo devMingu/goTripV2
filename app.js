@@ -13,6 +13,9 @@ app.use(express.static('public'));
 app.get('/goTrip', (req, res)=>{
     res.render('trip/home');
 })
+app.get('/goTrip/search', (req, res)=>{
+    res.render('trip/search');
+})
 
 
 app.listen(port, ()=>{

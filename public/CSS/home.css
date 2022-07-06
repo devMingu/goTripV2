@@ -7,6 +7,12 @@ body{
 i{
     color:black;
 }
+a{
+    text-decoration: none;
+}
+.a_color{
+    color:black;
+}
 .containerWidth{
     width:90%;
 }
@@ -101,8 +107,6 @@ i{
     width:250px;
 }
 .bodyImageContainer{
-    width:100%;
-    height:400px;
     /* background-color: bisque; */
     overflow: hidden;
 }
