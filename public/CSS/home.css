@@ -94,6 +94,8 @@ i{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background-color: aquamarine; */
+    width:90%;
 }
 .contentBody h1{
     width:250px;
@@ -102,9 +104,12 @@ i{
     width:100%;
     height:400px;
     /* background-color: bisque; */
-    border-radius: 10px;
     overflow: hidden;
 }
+.bodyImageContainer img{
+    border-radius: 10px;
+}
+
 
 
 /* contentFooter */
