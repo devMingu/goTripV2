@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const engine = require('ejs-mate');
 const path = require('path');
-const port = 3030;
+const port = process.env.PORT || 3000;
 
 
 app.set('view engine', 'ejs');
