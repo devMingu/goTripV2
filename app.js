@@ -10,7 +10,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', engine);
 app.use(express.static('public'));
 
-app.get('/gotrip', (req, res)=>{
+app.get('/', (req, res)=>{
     res.render('trip/home');
 })
 
