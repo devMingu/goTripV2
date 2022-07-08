@@ -1,0 +1,72 @@
+body{
+    margin:0;
+    background-color: rgb(255, 255, 255)
+}
+.searchContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+i{
+    font-size: 17px;
+}
+.s__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    height: 55%;
+    /* background-color: rgb(233, 255, 176); */
+}
+.contain1{
+    display: flex;
+    justify-content: space-between;
+}
+.houseAndActive{
+    display: flex;
+    justify-content: space-around;
+    width:100px;
+}
+.i_hidden{
+    visibility: hidden;
+}
+.houseAndActive{
+    margin:0 10px;
+}
+.houseAndActive :hover{
+    background-color: none;
+    border-bottom: 2px solid black;;
+}
+.contain2{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+.containTwoBox{
+    height: 60%;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 5px rgba(71, 71, 71, 0.1);
+    /* background-color: aquamarine; */
+}
+.contain3{
+    display: flex;
+}
+.searchList{
+    display:flex;
+    justify-content:center;
+    overflow-x: scroll;
+}
+
+.tourListBox{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:10px;
+}
+.tourListBox img{
+    border-radius: 10px;
+}
+
