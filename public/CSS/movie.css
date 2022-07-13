@@ -12,6 +12,9 @@ body{
 h1{
     margin-bottom:0;
 }
+
+
+
 .movieBox{
     display: flex;
     justify-content: center;
@@ -25,15 +28,37 @@ h1{
 .movieContent{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 80%;
+    /* flex-flow:wrap; */
+    overflow: scroll;
+    height: 100%;
     width: 90%;
+}
+
+.contentOfMovieTour{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 30%;
+    /* background-color: aliceblue; */
+    margin:10px 0;
+    border-bottom: 1px solid white;
+    padding:15px;
+}
+.contentOfMovieTour img{
+    width: 40%;
+    height: 90%;
+    border-radius: 30px;
+}
+.contentOfMovieTour__Explanatoin{
+    width: 50%;
     /* background-color: aliceblue; */
 }
-img{
-    width: 300px;
-    height: 150px;
+.hidden_content{
+    visibility: hidden;
 }
-.movieSubtitlev{
+.movieSubtitle{
+    padding: 10px;
 }

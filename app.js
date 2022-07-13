@@ -31,6 +31,9 @@ app.get('/goTrip/asia', (req, res)=>{
 app.get('/goTrip/europe', (req, res)=>{
     res.render('trip/europe');
 })
+app.get('/goTrip/movieTour', (req, res)=>{
+    res.render('trip/movie');
+})
 app.get('/goTrip/mediterranean', (req, res)=>{
     res.render('trip/mediterranean');
 })
