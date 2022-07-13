@@ -23,7 +23,9 @@ h1{
     height: 549px;
     background-color: rgb(0, 0, 0);
     margin-bottom: 10px;
+    box-shadow: 0 3px 1px 3px rgba(179, 179, 179, 0.3);
     /* background-color: pink; */
+    border-radius: 1% 10% 10% 5%;
 }
 .movieContent{
     display: flex;
@@ -45,7 +47,7 @@ h1{
     /* background-color: aliceblue; */
     margin:10px 0;
     border-bottom: 1px solid white;
-    padding:15px;
+    padding:10px;
 }
 .contentOfMovieTour img{
     width: 40%;
@@ -61,4 +63,5 @@ h1{
 }
 .movieSubtitle{
     padding: 10px;
+    margin-bottom: 10px;
 }
