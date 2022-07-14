@@ -61,7 +61,7 @@ i{
     border-radius: 15px;
     box-shadow: 1px 1px 1px 5px rgba(71, 71, 71, 0.1);
     padding: 23px;
-    /* background-color: aquamarine; */
+    margin-bottom: 1rem;
 }
 .contain3{
     display: flex;
