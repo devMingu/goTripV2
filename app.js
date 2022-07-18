@@ -15,8 +15,7 @@ const location = {
     '유럽': 'europe',
     '아시아': 'asia',
     '미국': 'united state',
-    '지중해' : 'mediterranean',
-    '북반구' : 'northern hemisphere',
+    '지중해' : 'mediterraneanSea',
 }
 
 app.get('/goTrip', (req, res)=>{
@@ -34,8 +33,8 @@ app.get('/goTrip/europe', (req, res)=>{
 app.get('/goTrip/movieTour', (req, res)=>{
     res.render('trip/movie');
 })
-app.get('/goTrip/mediterranean', (req, res)=>{
-    res.render('trip/mediterranean');
+app.get('/goTrip/mediterraneanSea', (req, res)=>{
+    res.render('trip/mediterraneanSea');
 })
 app.post('/goTrip', (req, res)=>{
     const loc = req.body.search.location;

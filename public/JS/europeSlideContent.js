@@ -7,7 +7,7 @@ const contentData = [
         img: "https://images.unsplash.com/photo-1493707553966-283afac8c358?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     },
     {
-        mainTitle: "틱톡..틱톡... 종소리가 들리시나요? 런던에서 즐기는 빅벤 체험",
+        mainTitle:"런던에서 즐기는 새로운 경험",
         subTitle: "from $102 per adult",
         img: "https://images.unsplash.com/photo-1562274419-949e955f11e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1322&q=80"
     },
@@ -27,7 +27,7 @@ const contentData = [
         img: "https://images.unsplash.com/photo-1553174733-117286fd10ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1279&q=80"
     },
     {
-        mainTitle: "영국에 왔으면 축구경기 보고 가야죠",
+        mainTitle: "런던에 왔으면 축구경기 보고 가야죠",
         subTitle: "from $430 per adult",
         img: "https://images.unsplash.com/photo-1459865264687-595d652de67e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     },

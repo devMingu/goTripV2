@@ -27,7 +27,14 @@ header img{
 }
 .gradiantAsia{
     background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    color:transparent;
+    color:transparent;
     -webkit-background-clip: text;    
+}
+.gradiantMediterranean{
+    background: linear-gradient(to left, #289cab, #F1F2B5);
+    color:transparent;
+    -webkit-background-clip: text;
+    
 }
 
 .countryContent{
@@ -104,3 +111,8 @@ button{
     display: flex;
 }
 
+
+.position__sticky{
+    position: sticky;
+    left:1px;
+}
