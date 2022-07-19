@@ -1,77 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/home.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/home.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="/CSS/country.css" />
     <title>여행지 추천 플랫폼 goTrip</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- navbar -->
     <section class="navbar">
-        <div class="navbarInnerContainer containerWidth">
-            <div class="navbar_Top">
-                <div class="navbar_Search">
-                    <div class="navbar_left">
-                        <div><a href="/gotrip/search"><i class="fas fa-search"></i></a></div>
-                        <div class="navbar_subTitle">
-                            <!-- <div>어디로 여행가세요?</div> -->
-                            <div><a href="/gotrip/search" style="color: black">어디로 여행가세요?</a></div>
-                            <div class="navbar_miniTitle">어디든지 언제든지 일주일이상 여행하고 싶을때</div> 
-                        </div>
-                    </div>  
-                    <div class="navbar_setting">
-                        <i class="fas fa-ellipsis-h"></i>
-                    </div>
+      <div class="navbarInnerContainer containerWidth">
+        <div class="navbar_Top">
+          <div class="navbar_Search">
+            <div class="navbar_left">
+              <div>
+                <a href="/gotrip/search"><i class="fas fa-search"></i></a>
+              </div>
+              <div class="navbar_subTitle">
+                <!-- <div>어디로 여행가세요?</div> -->
+                <div>
+                  <a href="/gotrip/search" style="color: black"
+                    >어디로 여행가세요?</a
+                  >
                 </div>
+                <div class="navbar_miniTitle">
+                  어디든지 언제든지 일주일이상 여행하고 싶을때
+                </div>
+              </div>
             </div>
-            <div class="navbarOptions">
-                
+            <div class="navbar_setting">
+              <i class="fas fa-ellipsis-h"></i>
             </div>
+          </div>
         </div>
+        <div class="navbarOptions"></div>
+      </div>
     </section>
 
     <!-- body -->
     <section class="contentBody">
-        <!-- homeContent.js -->
+    <div class="boxOfTitle">
+        <h1 class="slide_title">오늘 뭐할지 모르겠다면?</h1>
+    </div>  
+      <div class="slideContent">
+        <div class="slid__flex_column">
+          <!-- europeSlideContent.js -->
+        </div>
+      </div>
+      <!-- homeContent.js -->
     </section>
+
     <!-- bottom -->
     <footer class="contentFooter">
-        <div class="footerBox"> 
-            <div class="rowBox fotterFont">
-                <i class="fab fa-airbnb"></i>
-                <div>GoTrip</div>
-            </div>
-            <div class="columnBox fotterFont">
-                <div class="footerTitle">회사</div>
-                <div>상세정보</div>
-                <div>우리가 추구하는 여행의 가치</div>
-            </div>
-            <div class="columnBox fotterFont">
-                <div class="footerTitle">커뮤니티</div>
-                <div>아시아</div>
-                <div>유럽</div>
-                <div>아메리카</div>
-            </div>
-            <div class="columnBox fotterFont">
-                <div class="footerTitle">유용한 링크</div>
-                <div><a href="https://www.skyscanner.co.kr/?previousCultureSource=COOKIE&redirectedFrom=www.skyscanner.net" target="_blank" style="color:white">Skyscanner</a></div>
-                <div><a href="https://www.airbnb.co.kr/?_set_bev_on_new_domain=1656907519_N2QwYWJiMzYwNjU5" target="_blank" style="color:white">Airbnb</a></div>
-            </div>
+      <div class="footerBox">
+        <div class="rowBox fotterFont">
+          <i class="fab fa-airbnb"></i>
+          <div>GoTrip</div>
         </div>
+        <div class="columnBox fotterFont">
+          <div class="footerTitle">회사</div>
+          <div>상세정보</div>
+          <div>우리가 추구하는 여행의 가치</div>
+        </div>
+        <div class="columnBox fotterFont">
+          <div class="footerTitle">커뮤니티</div>
+          <div>아시아</div>
+          <div>유럽</div>
+          <div>아메리카</div>
+        </div>
+        <div class="columnBox fotterFont">
+          <div class="footerTitle">유용한 링크</div>
+          <div>
+            <a
+              href="https://www.skyscanner.co.kr/?previousCultureSource=COOKIE&redirectedFrom=www.skyscanner.net"
+              target="_blank"
+              style="color: white"
+              >Skyscanner</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://www.airbnb.co.kr/?_set_bev_on_new_domain=1656907519_N2QwYWJiMzYwNjU5"
+              target="_blank"
+              style="color: white"
+              >Airbnb</a
+            >
+          </div>
+        </div>
+      </div>
     </footer>
 
-
+    <script src="/JS/homeSlideContent.js"></script>
     <script src="/JS/homeContent.js"></script>
     <script src="/JS/home.js"></script>
     <script src="/JS/homeSearch.js"></script>
-</body>
+  </body>
 </html>

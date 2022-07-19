@@ -16,6 +16,7 @@ const location = {
     '아시아': 'asia',
     '미국': 'united state',
     '지중해' : 'mediterraneanSea',
+    '서울' : 'seoul'
 }
 
 app.get('/goTrip', (req, res)=>{
@@ -29,6 +30,9 @@ app.get('/goTrip/asia', (req, res)=>{
 })
 app.get('/goTrip/europe', (req, res)=>{
     res.render('trip/europe');
+})
+app.get('/goTrip/seoul', (req, res)=>{
+    res.render('trip/seoul');
 })
 app.get('/goTrip/movieTour', (req, res)=>{
     res.render('trip/movie');

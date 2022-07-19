@@ -18,22 +18,22 @@ let tour = [
         img: 'https://source.unsplash.com/collection/10526814/122x122'
     },
     {
-        location: '한국',
-        name: 'korea',
+        location: '서울',
+        name: 'seoul',
         img: 'https://source.unsplash.com/collection/10750452/122x122'
     },
     {
-        location: '일본',
+        location: '도쿄',
         name: 'japan',
         img: 'https://source.unsplash.com/collection/8515895/122x122'
     },
     {
-        location: '이탈리아',
+        location: '파리',
         name: 'italia',
         img: 'https://source.unsplash.com/collection/45135470/122x122'
     },
     {
-        location: '스칸디나비아',
+        location: '트롬소',
         name: 'scandinavia',
         img: 'https://source.unsplash.com/collection/1784623/122x122'
     },

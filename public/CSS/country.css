@@ -36,6 +36,13 @@ header img{
     -webkit-background-clip: text;
     
 }
+.gradiantSeoul{
+    background: linear-gradient(to left, #ffdb77, #fceabb);
+    color:transparent;
+    -webkit-background-clip: text;
+
+
+}
 
 .countryContent{
     display: flex;
@@ -83,6 +90,7 @@ button{
     margin-top: 10%;
     width: 100%;
     height: auto;
+    margin-top: 0;
     overflow: scroll;
 }
 .slideContent img{
@@ -111,8 +119,12 @@ button{
     display: flex;
 }
 
-
-.position__sticky{
-    position: sticky;
-    left:1px;
+.slide_title{
+    margin-left: 20px;
+}
+.goBack{
+    position:absolute;
+    top:13px;
+    left:15px;
+    color:#f9b700;
 }
