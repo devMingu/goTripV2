@@ -10,6 +10,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', engine);
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 
 const location = {
     '유럽': 'europe',
@@ -36,6 +37,12 @@ app.get('/goTrip/seoul', (req, res)=>{
 })
 app.get('/goTrip/movieTour', (req, res)=>{
     res.render('trip/movie');
+})
+app.get('/goTrip/register', (req, res)=>{
+    res.render('trip/register');
+})
+app.post('/goTrip/register', (req, res)=>{
+    console.log(req.body);
 })
 app.get('/goTrip/mediterraneanSea', (req, res)=>{
     res.render('trip/mediterraneanSea');

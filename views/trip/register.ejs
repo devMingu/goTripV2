@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/CSS/register.css" />
+    <title>가입하기 - GoTrip</title>
+  </head>
+  <body>
+    <section class="register__title_container">
+      <div class="register__logo">
+        <i class="fab fa-airbnb"></i>
+        <div>GoTrip</div>
+      </div>
+      <div class="register__head__title">가입하고 찾아보세요</div>
+      <div class="register__btn__box">
+        <div class="login__round__box login__postion__box login__facebook">
+          <i class="fab fa-facebook"></i>
+          Facebook으로 가입하기
+        </div>
+        <div class="login__round__box login__postion__box login__google">
+          <i class="fab fa-google"></i>
+          Google로 가입하기
+        </div>
+      </div>
+    </section>
+
+    <section class="register__input__container">
+      <div>이메일 주소로 가입하기</div>
+      <form method="POST" action="/goTrip/register">
+        <div class="register__input__box">
+          <label for="firstName">이름이 어떻게 되시나요?</label>
+          <input name="user[firstName]" id="firstName" type="text" placeholder="이름을 입력하세요." required/>
+        </div>
+        <div class="register__input__box">
+          <label for="lastName">성이 어떻게 되시나요?</label>
+          <input name="user[lastName]" id="lastName" type="text" placeholder="성을 입력하세요." required/>
+        </div>
+        <div class="register__input__box">
+          <label for="sex">성별이 어떻게 되시나요?</label>
+          <input name="user[sex]" id="sex" type="text" placeholder="성별을 입력하세요." required/>
+        </div>
+        <div class="register__input__box">
+          <label for="age">나이가 어떻게 되시나요?</label>
+          <input name="user[age]"id="age" type="text" placeholder="나이를 입력하세요." required/>
+        </div>
+        <div class="register__input__box">
+          <label for="email">이메일이 어떻게 되시나요?</label>
+          <input name="user[email]" id="email" type="text" placeholder="이메일을 입력하세요." required/>
+        </div>
+        <div class="register__input__box">
+          <label for="profileImg">프로필에 사용할 이미지</label>
+          <input
+            name="user[profileImg]"
+            id="profileImg"
+            type="text"
+            placeholder="사진의 주소를 넣어주세요."
+            required
+          />
+        </div>
+        <div class="register__input__box">
+          <label for="country">현재 거주지</label>
+          <input
+            name="user[country]"
+            id="country"
+            type="text"
+            placeholder="거주하는 나라를 입력하세요."
+            required
+          />
+        </div>
+        <div>
+            <button>가입하기</button>
+          </div>
+      </form>
+    </section>
+  </body>
+</html>
