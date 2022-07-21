@@ -64,13 +64,22 @@ body{
     align-items: center;
     width: 100%;
     margin-top: 20px;
-}
-form{
-    width: 90%;
+
 }
 .register__input__box{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 90%;
+    /* background-color: palegoldenrod; */
+}
+form{
+    width: 100%;
+}
+.register__input__box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 10px 0;
 }
 .register__input__box label{

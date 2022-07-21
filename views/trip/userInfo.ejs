@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/CSS/userInfo.css">
+    <title><%- data.userFirstName %>의 정보</title>
+</head>
+<body>
+
+    <section class="profile__container">
+        <div class="profile_view">
+            <div class="profile__box">
+                <div><img src="<%- data.userProfileImage %>" alt=""></div>
+                <div class="profile__info__text">
+                    <h1><%- data.userFirstName %> <%- data.userLastName %></h1>
+                    <span>Travel is my life</span>
+                </div>
+            </div>
+            <div class="profile__sub__box">
+                <div class="profile__email"><i class="far fa-envelope"></i> <%- data.userEmail %></div>
+                <div class="profile__sex"><i class="far fa-user"></i> <%- data.userSex %></div>
+            </div>
+        </div>
+    </section>
+    <section class="profile__second__container">
+        <div class="profile__second__age">
+            <div class="seconde__box">
+                <span><%- data.userAge %></span>
+                <div>Age</div>
+            </div>
+        </div>
+        <div class="profile__second__country">
+            <div class="seconde__box">
+                <span><%- data.userCountry %></span>
+                <div>Country</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

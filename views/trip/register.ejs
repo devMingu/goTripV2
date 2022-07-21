@@ -34,51 +34,56 @@
 
     <section class="register__input__container">
       <div>이메일 주소로 가입하기</div>
-      <form method="POST" action="/goTrip/register">
-        <div class="register__input__box">
-          <label for="firstName">이름이 어떻게 되시나요?</label>
-          <input name="user[firstName]" id="firstName" type="text" placeholder="이름을 입력하세요." required/>
-        </div>
-        <div class="register__input__box">
-          <label for="lastName">성이 어떻게 되시나요?</label>
-          <input name="user[lastName]" id="lastName" type="text" placeholder="성을 입력하세요." required/>
-        </div>
-        <div class="register__input__box">
-          <label for="sex">성별이 어떻게 되시나요?</label>
-          <input name="user[sex]" id="sex" type="text" placeholder="성별을 입력하세요." required/>
-        </div>
-        <div class="register__input__box">
-          <label for="age">나이가 어떻게 되시나요?</label>
-          <input name="user[age]"id="age" type="text" placeholder="나이를 입력하세요." required/>
-        </div>
-        <div class="register__input__box">
-          <label for="email">이메일이 어떻게 되시나요?</label>
-          <input name="user[email]" id="email" type="text" placeholder="이메일을 입력하세요." required/>
-        </div>
-        <div class="register__input__box">
-          <label for="profileImg">프로필에 사용할 이미지</label>
-          <input
-            name="user[profileImg]"
-            id="profileImg"
-            type="text"
-            placeholder="사진의 주소를 넣어주세요."
-            required
-          />
-        </div>
-        <div class="register__input__box">
-          <label for="country">현재 거주지</label>
-          <input
-            name="user[country]"
-            id="country"
-            type="text"
-            placeholder="거주하는 나라를 입력하세요."
-            required
-          />
-        </div>
-        <div>
-            <button>가입하기</button>
+      <section class="register__input__box">
+        <form method="POST" action="/goTrip/register">
+          <div class="register__input__box">
+            <label for="firstName">이름이 어떻게 되시나요?</label>
+            <input name="user[userFirstName]" id="firstName" type="text" placeholder="이름을 입력하세요." required/>
           </div>
-      </form>
+          <div class="register__input__box">
+            <label for="lastName">성이 어떻게 되시나요?</label>
+            <input name="user[userLastName]" id="lastName" type="text" placeholder="성을 입력하세요." required/>
+          </div>
+          <div class="register__input__box">
+            <label for="sex">성별이 어떻게 되시나요?</label>
+            <input name="user[userSex]" id="sex" type="text" placeholder="성별을 입력하세요." required/>
+          </div>
+          <div class="register__input__box">
+            <label class="valueOfAge" for="age">나이가 어떻게 되시나요? <span id="value1">20</span><span>살</span></label>
+            <input name="user[userAge]" id="age" type="range" min="10" max="60" placeholder="나이를 입력하세요." value="20" required oninput="document.getElementById('value1').innerHTML=this.value;"/>
+          </div>
+          <div class="register__input__box">
+            <label for="email">이메일이 어떻게 되시나요?</label>
+            <input name="user[userEmail]" id="email" type="email" placeholder="이메일을 입력하세요." required/>
+          </div>
+          <div class="register__input__box">
+            <label for="profileImg">프로필에 사용할 이미지</label>
+            <input
+              name="user[userProfileImage]"
+              id="profileImg"
+              type="text"
+              placeholder="사진의 주소를 넣어주세요."
+              required
+            />
+          </div>
+          <div class="register__input__box">
+            <label for="country">현재 거주지</label>
+            <input
+              name="user[userCountry]"
+              id="country"
+              type="text"
+              placeholder="거주하는 나라를 입력하세요."
+              required
+            />
+          </div>
+          <div>
+              <button>가입하기</button>
+            </div>
+        </form>
+      </section>
     </section>
+
+
+    <script src="/JS/register.js"></script>
   </body>
 </html>

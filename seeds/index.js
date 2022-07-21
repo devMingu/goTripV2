@@ -11,11 +11,12 @@ db.once("open", () => {
 
 
 const seedDB = async () =>{
-    const data = new Userdata({
-        userAge: 25,
-    })
-    await data.save();
-    console.log(data);
+    // const data = new Userdata({
+    //     userAge: 25,
+    // })
+    // await data.save();
+    // console.log(data);
+    await Userdata.deleteMany();
 }
 
 seedDB().then(() => {

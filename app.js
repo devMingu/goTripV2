@@ -3,7 +3,15 @@ const app = express();
 const engine = require('ejs-mate');
 const path = require('path');
 const port = process.env.PORT || 3030;
+const mongoose = require('mongoose');
+const Userdata = require('./model/userModel/userData');
+mongoose.connect('mongodb://localhost:27017/goTrip');
+const db = mongoose.connection;
 
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", () => {
+    console.log("Database connected");
+});
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -41,8 +49,10 @@ app.get('/goTrip/movieTour', (req, res)=>{
 app.get('/goTrip/register', (req, res)=>{
     res.render('trip/register');
 })
-app.post('/goTrip/register', (req, res)=>{
-    console.log(req.body);
+app.post('/goTrip/register', async (req, res)=>{
+    const data = new Userdata(req.body.user);
+    await data.save();
+    res.render("trip/userInfo", {data});
 })
 app.get('/goTrip/mediterraneanSea', (req, res)=>{
     res.render('trip/mediterraneanSea');
