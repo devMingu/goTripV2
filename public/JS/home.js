@@ -5,6 +5,10 @@ const options = [
         tagName: 'fa-lira-sign',
     }, 
     {
+        name: '한국',
+        tagName: 'fa-city',
+    }, 
+    {
         name: '캐나다',
         tagName: 'fa-tree',
     },
@@ -23,7 +27,7 @@ const options = [
     {
         name: '파리',
         tagName: 'fa-hat-cowboy',
-    }
+    },
     ];
 
 for(let i=0; i<options.length; i++){

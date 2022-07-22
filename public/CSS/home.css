@@ -1,167 +1,191 @@
-body{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
 }
-i{
-    color:black;
+i {
+  color: black;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-.a_color{
-    color:black;
+.a_color {
+  color: black;
 }
-.containerWidth{
-    width:90%;
+.containerWidth {
+  width: 90%;
 }
-.navbar{
-    display:flex;
-    justify-content: center;
-    width: 100%;
-    height: 120px;
-    /* background-color: rgb(255, 157, 157); */
-    box-shadow: 1px 1px 1px 1px rgba(71, 71, 71, 0.1);
+.navbar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+  /* background-color: rgb(255, 157, 157); */
+  max-width: 750px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
-.navbarInnerContainer{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.navbarInnerContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.navbar_Top{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-    /* background-color: aqua; */
-    height: 50%;
-    color:white;
+.navbar_Top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* background-color: aqua; */
+  height: 50%;
+  color: white;
 }
-.navbar_Search{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top:20px;
-    width: 100%;
-    height: 80%;
-    border-radius: 30px;
-    box-shadow: 1px 1px 1px 2px rgba(128, 128, 128, .2);
+.navbar_Search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 80%;
+  border-radius: 30px;
+  box-shadow: 1px 1px 1px 2px rgba(128, 128, 128, 0.2);
 }
-.navbar_left{
-    display:flex;
-    align-items: center;
-    margin-left: 15px;
+.navbar_left {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
 }
-.navbar_setting{
-    margin-right: 15px;
+.navbar_setting {
+  margin-right: 15px;
 }
-.navbar_subTitle{
-    margin-left: 15px;
-    font-size: 1em;
-    color:black;
+.navbar_subTitle {
+  margin-left: 15px;
+  font-size: 1em;
+  color: black;
 }
-.navbar_miniTitle{
-    font-size: 10px;
-    color:rgb(162, 162, 162);
+.navbar_miniTitle {
+  font-size: 10px;
+  color: rgb(162, 162, 162);
 }
-.navbarOptions{
-    margin-top: 10px;
-    display:flex;
-    justify-content: space-between;
-    flex-wrap:nowrap;
-    overflow-x:scroll;
-    padding:10px;
+.navbarOptions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  padding: 10px;
+  /* background-color: aliceblue; */
 }
-.optionsMargin{
-    display: flex;
-    font-size: 12px;
+.optionsMargin {
+  display: flex;
+  font-size: 12px;
 }
-.optionsContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.optionsContainer i{
-    font-size: 20px;
-    margin-bottom: 5px;
-    margin-top:10px;
-    color:rgb(71, 71, 71);
+.optionsContainer i {
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  color: rgb(71, 71, 71);
 }
-.optionsContainer div{
-    color:rgb(71, 71, 71);
+.optionsContainer div {
+  color: rgb(71, 71, 71);
 }
 
 /*                                     */
 
-.contentBody{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-color: aquamarine; */
-    width:100%;
+.contentBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: aquamarine; */
+  width: 100%;
+  max-width: 750px;
 }
-.contentBody h1{
-    width:250px;
+.contentBody h1 {
+  width: 250px;
+  /* background-color: bisque; */
 }
-.bodyImageContainer{
-    /* background-color: bisque; */
-    overflow: hidden;
+.bodyImageContainer {
+  /* background-color: bisque; */
+  /* overflow: hidden; */
 }
-.bodyImageContainer img{
-    border-radius: 10px;
+.bodyImageContainer img {
+  width: 360px;
+  height: 340px;
+  border-radius: 25px;
 }
-.boxOfTitle{
-    width: 100%;
+.boxOfTitle {
+  width: 100%;
 }
 
 /* contentFooter */
-.contentFooter{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-top:30px;
-    width: 100%;
-    height: 50vh;
-    background-color: black;
+.contentFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+  background-color: black;
 }
-.contentFooter i{
-    color:white;
+.contentFooter i {
+  color: white;
 }
 
 /* footer */
-.footerBox{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 90%;
-    width: 90%;
+.footerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90%;
+  width: 90%;
+  max-width: 750px;
 }
-.fotterFont{
-    color:white;
-    font-size: 15px;
+.fotterFont {
+  color: white;
+  font-size: 15px;
 }
-.rowBox{
-    display: flex;
-    color:pink;
-    font-size: 17px;
+.rowBox {
+  display: flex;
+  color: pink;
+  font-size: 17px;
+  padding:10px;
+  /* background-color: aliceblue; */
 }
-.rowBox i{
-    margin-right: 5px;
-    font-weight: bold;
-    color:pink;
-    font-size: 20px;
+.rowBox i {
+  margin-right: 5px;
+  font-weight: bold;
+  color: pink;
+  font-size: 20px;
 }
-.columnBox{
-    display:flex;
-    flex-direction: column;
+.columnBox {
+  display: flex;
+  flex-direction: column;
 }
-.columnBox div{
-    margin: 5px 0;
+.columnBox div {
+  margin: 5px 0;
+  padding:10px;
 }
-.footerTitle{
-    color:rgb(183, 183, 183);
-    font-size: 13px;
+.footerTitle {
+  color: rgb(183, 183, 183);
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 750px) {
+  .middle_content {
+    width: 100%;
+    padding:20px;
+  }
+  .middle_content h1{
+    font-size: 30px;   
+    width: 100%;
+  }
+  .bodyImageContainer img {
+    width: 100%;
+    height: 80%;
+  }
 }
