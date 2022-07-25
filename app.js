@@ -6,7 +6,12 @@ const port = process.env.PORT || 3030;
 const mongoose = require('mongoose');
 const Userdata = require('./model/userModel/userData');
 // mongoose.connect('mongodb://localhost:27017/goTrip');
-mongoose.connect("mongodb+srv://wintermingu12:!Mrlaalsrn12@dbgotripuser.enhtf48.mongodb.net/?retryWrites=true&w=majority",{
+// mongoose.connect("mongodb+srv://wintermingu12:!Mrlaalsrn12@dbgotripuser.enhtf48.mongodb.net/?retryWrites=true&w=majority",{
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//     useUnifiedTopology: true
+// });
+goose.connect(process.env.MONGO_DB,{
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true

@@ -6,6 +6,7 @@ mongoose.connect("mongodb+srv://wintermingu12:!Mrlaalsrn12@dbgotripuser.enhtf48.
     useCreateIndex: true,
     useUnifiedTopology: true
 });
+
 const db = mongoose.connection;
 
 db.on("error", console.error.bind(console, "connection error:"));
