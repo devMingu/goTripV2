@@ -6,12 +6,8 @@ const port = process.env.PORT || 3030;
 const mongoose = require('mongoose');
 const Userdata = require('./model/userModel/userData');
 // mongoose.connect('mongodb://localhost:27017/goTrip');
-// mongoose.connect("mongodb+srv://wintermingu12:!Mrlaalsrn12@dbgotripuser.enhtf48.mongodb.net/?retryWrites=true&w=majority",{
-//     useNewUrlParser: true,
-//     useCreateIndex: true,
-//     useUnifiedTopology: true
-// });
-mongoose.connect(process.env.MONGO_DB);
+mongoose.connect("mongodb+srv://wintermingu12:!Mrlaalsrn12@dbgotripuser.enhtf48.mongodb.net/?retryWrites=true&w=majority");
+// mongoose.connect(process.env.MONGO_DB);
 const db = mongoose.connection;
 
 db.on("error", console.error.bind(console, "connection error:"));
@@ -56,9 +52,9 @@ app.get('/goTrip/register', (req, res)=>{
     res.render('trip/register');
 })
 app.post('/goTrip/register', async (req, res)=>{
-    const data = new Userdata(req.body.user);
-    await data.save();
-    res.render("trip/userInfo", {data});
+    // const data = new Userdata(req.body.user);
+    // await data.save();
+    res.render("trip/userInfo");
 })
 app.get('/goTrip/mediterraneanSea', (req, res)=>{
     res.render('trip/mediterraneanSea');
