@@ -54,7 +54,7 @@ app.get('/goTrip/register', (req, res)=>{
 app.post('/goTrip/register', async (req, res)=>{
     // const data = new Userdata(req.body.user);
     // await data.save();
-    res.render("trip/userInfo");
+    res.render("trip/userInfo", {data: req.body.user});
 })
 app.get('/goTrip/mediterraneanSea', (req, res)=>{
     res.render('trip/mediterraneanSea');
