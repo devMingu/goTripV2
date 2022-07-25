@@ -11,11 +11,7 @@ const Userdata = require('./model/userModel/userData');
 //     useCreateIndex: true,
 //     useUnifiedTopology: true
 // });
-goose.connect(process.env.MONGO_DB,{
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true
-});
+goose.connect(process.env.MONGO_DB);
 const db = mongoose.connection;
 
 db.on("error", console.error.bind(console, "connection error:"));
