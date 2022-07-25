@@ -46,14 +46,14 @@ app.get('/goTrip/seoul', (req, res)=>{
 app.get('/goTrip/movieTour', (req, res)=>{
     res.render('trip/movie');
 })
-// app.get('/goTrip/register', (req, res)=>{
-//     res.render('trip/register');
-// })
-// app.post('/goTrip/register', async (req, res)=>{
-//     const data = new Userdata(req.body.user);
-//     await data.save();
-//     res.render("trip/userInfo", {data});
-// })
+app.get('/goTrip/register', (req, res)=>{
+    res.render('trip/register');
+})
+app.post('/goTrip/register', async (req, res)=>{
+    const data = new Userdata(req.body.user);
+    await data.save();
+    res.render("trip/userInfo", {data});
+})
 app.get('/goTrip/mediterraneanSea', (req, res)=>{
     res.render('trip/mediterraneanSea');
 })
