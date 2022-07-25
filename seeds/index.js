@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Userdata = require('../model/userModel/userData');
-mongoose.connect('mongodb://localhost:27017/goTrip');
+// mongoose.connect('mongodb://localhost:27017/goTrip');
+mongoose.connect("mongodb+srv://wintermingu12:!Mrlaalsrn12@dbgotripuser.enhtf48.mongodb.net/?retryWrites=true&w=majority");
 const db = mongoose.connection;
 
 db.on("error", console.error.bind(console, "connection error:"));
@@ -16,7 +17,7 @@ const seedDB = async () =>{
     // })
     // await data.save();
     // console.log(data);
-    await Userdata.deleteMany();
+    // await Userdata.deleteMany();
 }
 
 seedDB().then(() => {
