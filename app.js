@@ -3,17 +3,17 @@ const app = express();
 const engine = require('ejs-mate');
 const path = require('path');
 const port = process.env.PORT || 3030;
-const mongoose = require('mongoose');
-const Userdata = require('./model/userModel/userData');
+// const mongoose = require('mongoose');
+// const Userdata = require('./model/userModel/userData');
 // mongoose.connect('mongodb://localhost:27017/goTrip');
-mongoose.connect("mongodb+srv://wintermingu12:!Mrlaalsrn12@dbgotripuser.enhtf48.mongodb.net/?retryWrites=true&w=majority");
 // mongoose.connect(process.env.MONGO_DB);
-const db = mongoose.connection;
+// mongoose.connect("mongodb+srv://wintermingu12:!Mrlaalsrn12@dbgotripuser.enhtf48.mongodb.net/?retryWrites=true&w=majority");
+// const db = mongoose.connection;
 
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", () => {
-    console.log("Database connected");
-});
+// db.on("error", console.error.bind(console, "connection error:"));
+// db.once("open", () => {
+//     console.log("Database connected");
+// });
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -27,7 +27,9 @@ const location = {
     '아시아': 'asia',
     '미국': 'united state',
     '지중해' : 'mediterraneanSea',
-    '서울' : 'seoul'
+    '서울' : 'seoul',
+    '도쿄' : 'tokyo',
+    '트롬소': 'tromso'
 }
 
 app.get('/goTrip', (req, res)=>{
@@ -45,17 +47,23 @@ app.get('/goTrip/europe', (req, res)=>{
 app.get('/goTrip/seoul', (req, res)=>{
     res.render('trip/seoul');
 })
+app.get('/goTrip/tokyo', (req, res)=>{
+    res.render('trip/tokyo');
+})
+app.get('/goTrip/tromso', (req, res)=>{
+    res.render('trip/tromso');
+})
 app.get('/goTrip/movieTour', (req, res)=>{
     res.render('trip/movie');
 })
-app.get('/goTrip/register', (req, res)=>{
-    res.render('trip/register');
-})
-app.post('/goTrip/register', async (req, res)=>{
-    // const data = new Userdata(req.body.user);
-    // await data.save();
-    res.render("trip/userInfo", {data: req.body.user});
-})
+// app.get('/goTrip/register', (req, res)=>{
+//     res.render('trip/register');
+// })
+// app.post('/goTrip/register', async (req, res)=>{
+//     const data = new Userdata(req.body.user);
+//     await data.save();
+//     res.render("trip/userInfo", {data: req.body.user});
+// })
 app.get('/goTrip/mediterraneanSea', (req, res)=>{
     res.render('trip/mediterraneanSea');
 })

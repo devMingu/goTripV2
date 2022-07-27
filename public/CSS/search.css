@@ -1,115 +1,183 @@
-body{
-    margin:0;
-    background-color: rgb(255, 255, 255)
+body {
+  margin: 0;
+  background-color: rgb(255, 255, 255);
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-.carousel-item img{
-    border-radius: 15px;
-    box-shadow: 1px 1px 1px 3px rgba(71, 71, 71, 0.1);
+
+.searchContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.backgroundOpacity{
-    opacity: 0.6;
+i {
+  font-size: 15px;
 }
-.backgroundOpacity1{
-    opacity: 0.1;
+.s__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 80%;
+  max-width: 1280px;
+  /* background-color: rgb(233, 255, 176); */
 }
-.searchContainer{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.contain1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-i{
-    font-size: 15px;
+.houseAndActive {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
 }
-.s__container{
+.i_hidden {
+  visibility: hidden;
+}
+.houseAndActive {
+  margin: 0 10px;
+}
+.houseAndActive :hover {
+  background-color: none;
+  border-bottom: 2px solid black;
+}
+.contain2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.containTwoBox {
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 5px rgba(71, 71, 71, 0.1);
+  padding: 23px;
+  margin-bottom: 1rem;
+}
+.contain3 {
+  display: flex;
+  flex-direction: column;
+}
+.searchList {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: scroll;
+}
+
+.tourListBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+.tourListBox img {
+  border-radius: 10px;
+  width: 122px;
+  height: 122px;
+}
+
+.searchOptionBox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 1px 3px rgba(135, 135, 135, 0.1);
+}
+
+.searchFotterBox {
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 1px 3px rgba(135, 135, 135, 0.1);
+  max-width: 1280px;
+}
+.searchFooter {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.activity {
+  position: absolute;
+  top: 8%;
+}
+
+@media only screen and (min-width: 750px) {
+  .houseAndActive {
+    width: 200px;
+  }
+  .search__activity {
+    font-size: 30px;
+  }
+  .search__hotel {
+    font-size: 30px;
+  }
+  .contain1 i{
+      font-size: 25px;
+  }
+  .searchContainer {
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+  }
+  .s__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 90%;
-    height: 65%;
-    /* background-color: rgb(233, 255, 176); */
-}
-.contain1{
-    display: flex;
-    justify-content: space-between;
-}
-.houseAndActive{
-    display: flex;
-    justify-content: space-around;
-    width:100px;
-}
-.i_hidden{
-    visibility: hidden;
-}
-.houseAndActive{
-    margin:0 10px;
-}
-.houseAndActive :hover{
-    background-color: none;
-    border-bottom: 2px solid black;;
-}
-.contain2{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.containTwoBox{
-    border-radius: 15px;
-    box-shadow: 1px 1px 1px 5px rgba(71, 71, 71, 0.1);
-    padding: 23px;
-    margin-bottom: 1rem;
-}
-.contain3{
-    display: flex;
-    flex-direction: column;
-}
-.searchList{
-    display:flex;
-    justify-content:flex-start;
-    overflow-x: scroll;
-}
-
-.tourListBox{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin:10px;
-}
-.tourListBox img{
+    height: 100%;
+  }
+  .contain2 {
+    height: 700px;
+    margin-top:3%;
+  }
+  .tourListBox img {
     border-radius: 10px;
-}
+    width: 300px;
+    height: 330px;
+  }
+  .divLocation {
+    font-size: 25px;
+  }
+  .searchOptionBox {
+    align-items: center;
+    height: 70px;
+    padding: 20px;
+    border-radius: 11px;
+    font-size: 25px;
+    margin-top:1%;
+  }
+  .contain2__title {
+    font-size: 40px;
+  }
+  input {
+    height: 60px;
+  }
 
-
-.searchOptionBox{
+  .searchFotterBox {
+    width: 90%;
+    height: 80px;
     display: flex;
-    justify-content: space-between;
-    width:100%;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 1px 1px 1px 3px rgba(135, 135, 135, 0.1);
-}
-
-.searchFotterBox{
-    width: 100%;
-    height: 7%;
-    display:flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
     box-shadow: 1px 1px 1px 3px rgba(135, 135, 135, 0.1);
-}
-.searchFooter{
+  }
+  .searchFooter {
     width: 50%;
     display: flex;
     justify-content: center;
     font-weight: bold;
-}
-
-.activity{
-    position: absolute;
-    top:8%;
+    font-size: 30px;
+  }
 }

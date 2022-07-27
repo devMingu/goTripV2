@@ -95,7 +95,7 @@ a {
   color: rgb(71, 71, 71);
 }
 
-/*                                     */
+/*     */
 
 .contentBody {
   display: flex;
@@ -114,8 +114,8 @@ a {
   /* overflow: hidden; */
 }
 .bodyImageContainer img {
-  width: 360px;
-  height: 340px;
+  width: 380px;
+  height: 360px;
   border-radius: 25px;
 }
 .boxOfTitle {

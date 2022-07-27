@@ -30,15 +30,17 @@
         <div class="contain1">
           <a href="/goTrip"><i class="fas fa-angle-left">홈</i></a>
           <div class="houseAndActive">
-            <div>체험</div>
-            <div>숙소</div>
+            <div class="search__activity">체험</div>
+            <div class="search__hotel">숙소</div>
           </div>
           <div class="i_hidden">
             <i class="fas fa-filter"></i>
           </div>
         </div>
         <div class="contain2 containTwoBox">
-          <h2>여행지를 알려주세요</h2>
+          <h2 class="contain2__title">
+            <!-- JS -->
+          </h2>
           <form action="/goTrip" method="POST" class="input-group mb-3">
             <input
               name="search[location]"
@@ -79,7 +81,10 @@
       </section>
     </section>
 
+
+
     <script src="/JS/search.js"></script>
+    <script src="/JS/searchOptions.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
       integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"

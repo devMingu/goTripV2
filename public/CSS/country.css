@@ -40,9 +40,20 @@ header img{
     background: linear-gradient(to left, #ffdb77, #fceabb);
     color:transparent;
     -webkit-background-clip: text;
-
+}
+.gradiantTokyo{
+    background: linear-gradient(to right, #92FE9D, #59dbff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:transparent;
+    -webkit-background-clip: text;      
+}
+.gradiantTromso{
+    background: linear-gradient(to right, #F8FFAE, #93ffe9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:transparent;
+    -webkit-background-clip: text;   
+   
 
 }
+
 
 .countryContent{
     display: flex;
