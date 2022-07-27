@@ -60,8 +60,11 @@ for(let i=0; i<europeData.length; i++){
 
 
     divTitle.textContent = europeData[i].title;
-    
     pTag.textContent = europeData[i].description;
+
+    divTitle.classList.add('engFontStyle');
+    pTag.classList.add('engFontStyle');
+    textTag.classList.add('engFontStyle');
 
     aTag.href = europeData[i].link;
     aTag.target = "_blank";

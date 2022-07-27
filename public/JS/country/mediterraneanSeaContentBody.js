@@ -60,9 +60,12 @@ for(let i=0; i<mediterraneanSeaData.length; i++){
 
 
     divTitle.textContent = mediterraneanSeaData[i].title;
-    
     pTag.textContent = mediterraneanSeaData[i].description;
 
+    divTitle.classList.add('engFontStyle');
+    pTag.classList.add('engFontStyle');
+    textTag.classList.add('engFontStyle');
+    
     aTag.href = mediterraneanSeaData[i].link;
     aTag.target = "_blank";
     aTag.textContent = mediterraneanSeaData[i].linkTag;
