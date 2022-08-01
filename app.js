@@ -62,6 +62,24 @@ app.get('/goTrip/register', (req, res)=>{
 app.get('/goTrip/homeJapan', (req, res)=>{
     res.render('homeCountry/homeJapan');
 });
+app.get('/goTrip/homeKorea', (req, res)=>{
+    res.render('homeCountry/homeKorea');
+});
+app.get('/goTrip/homeCanada', (req, res)=>{
+    res.render('homeCountry/homeCanada');
+});
+app.get('/goTrip/homeAmerica', (req, res)=>{
+    res.render('homeCountry/homeAmerica');
+});
+app.get('/goTrip/homeMolta', (req, res)=>{
+    res.render('homeCountry/homeMolta');
+});
+app.get('/goTrip/homeNorway', (req, res)=>{
+    res.render('homeCountry/homeNorway');
+});
+app.get('/goTrip/homeParis', (req, res)=>{
+    res.render('homeCountry/homeParis');
+});
 
 // app.post('/goTrip/register', async (req, res)=>{
 //     const data = new Userdata(req.body.user);
