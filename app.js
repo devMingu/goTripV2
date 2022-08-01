@@ -56,9 +56,13 @@ app.get('/goTrip/tromso', (req, res)=>{
 app.get('/goTrip/movieTour', (req, res)=>{
     res.render('trip/movie');
 })
-// app.get('/goTrip/register', (req, res)=>{
-//     res.render('trip/register');
-// })
+app.get('/goTrip/register', (req, res)=>{
+    res.render('trip/register');
+});
+app.get('/goTrip/homeJapan', (req, res)=>{
+    res.render('homeCountry/homeJapan');
+});
+
 // app.post('/goTrip/register', async (req, res)=>{
 //     const data = new Userdata(req.body.user);
 //     await data.save();

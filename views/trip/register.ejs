@@ -14,7 +14,8 @@
     <title>가입하기 - GoTrip</title>
   </head>
   <body>
-    <section class="register__title_container">
+    <!-- <div id="map" style="width: 500px; height: 400px"></div> -->
+    <!-- <section class="register__title_container">
       <div class="register__logo">
         <i class="fab fa-airbnb"></i>
         <div>GoTrip</div>
@@ -81,8 +82,40 @@
             </div>
         </form>
       </section>
-    </section>
+    </section> -->
 
+
+    
+    <!-- <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=158a2a1f18a17c92ab71711aeac3b7ca"
+    ></script>
+    <script>
+      // var container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
+      // var options = {
+      //   //지도를 생성할 때 필요한 기본 옵션
+      //   center: new kakao.maps.LatLng(latitude, longitude), //지도의 중심좌표.
+      //   level: 3, //지도의 레벨(확대, 축소 정도)
+      // };
+
+      // var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+      function success({ coords, timestamp }) {
+            const latitude = coords.latitude;   // 위도
+            const longitude = coords.longitude; // 경도
+            
+            alert(`위도: ${latitude}, 경도: ${longitude}, 위치 반환 시간: ${timestamp}`);
+        }
+
+        function getUserLocation() {
+            if (!navigator.geolocation) {
+                throw "위치 정보가 지원되지 않습니다.";
+            }
+            navigator.geolocation.getCurrentPosition(success);
+        }
+
+        getUserLocation();
+
+    </script> -->
 
     <script src="/JS/register.js"></script>
   </body>

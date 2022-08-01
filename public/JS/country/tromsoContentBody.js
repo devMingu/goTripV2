@@ -57,7 +57,7 @@ for(let i=0; i<europeData.length; i++){
     divTitle.classList.add("c_title");
     divContent.classList.add("countryContent");
     divContainer.classList.add("countryContainer");
-
+    textTag.classList.add('engFontStyle');
 
     divTitle.textContent = europeData[i].title;
     
