@@ -46,7 +46,7 @@ for(let i=0 ; i<contentData.length ; i++){
     h5Tag.textContent = contentData[i].subTitle;
 
     divTag1.classList.add("slideTourBox");
-
+    
     divTag2.appendChild(imgTag);
     divTag3.appendChild(h3Tag);
     divTag3.appendChild(h5Tag);

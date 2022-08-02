@@ -130,7 +130,6 @@ button{
     justify-content: flex-start;
     padding: 10px;
     width: 70%;
-    /* background-color: #70e1f5; */
     margin: 10px;
     margin-top: 0px;
 }
@@ -152,7 +151,7 @@ button{
     color:#f9b700;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 768px) {
     .titlePostion{
         top:7%;
     }
@@ -166,8 +165,7 @@ button{
     }
     .slide__container{
         display: flex;
-        width: 100%;
-        justify-content: center;
+        width: auto;
     }
     .slide_box{
         display: flex;
