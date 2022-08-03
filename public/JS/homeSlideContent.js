@@ -8,12 +8,12 @@ const contentData = [
     },
     {
         mainTitle:"자연과 어우러진 숙소",
-        subTitle: "from $250 per adult",
+        subTitle: "이런 곳에서 살면 행복할것 같습니다",
         img: "https://images.unsplash.com/photo-1659259540437-0fe84def75cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80"
     },
     {
         mainTitle: "사랑하는 사람과 떠나는 피크닉",
-        subTitle: "from $80 per adult",
+        subTitle: "사랑하는 사람과 함께라면 어디든 아름답지 않겠어요?",
         img: "https://images.unsplash.com/photo-1596120236172-231999844ade?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
     },
     {
@@ -23,12 +23,12 @@ const contentData = [
     },
     {
         mainTitle: "오늘은 조용히 독서할래요",
-        subTitle: "free",
+        subTitle: "집 근처 도서관에서 책 읽어보아요",
         img: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1890&q=80"
     },
     {
         mainTitle: "파도치는 해변가를 걸어볼래요!",
-        subTitle: "from $19.99 per adult",
+        subTitle: "가장 가까운 해변을 찾아볼래요?",
         img: "https://images.unsplash.com/photo-1597116635010-8b65f0dce76c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1530&q=80"
     },
     {
@@ -63,7 +63,7 @@ const contentData = [
     },
     {
         mainTitle: "오늘은 나만의 이야기를 진솔하게 풀어봐요",
-        subTitle: "보이는 저 곳에 여러분들이 보일까요?",
+        subTitle: "마음속 이야기 꺼내놓기 약속!",
         img: "https://images.unsplash.com/flagged/photo-1564401398070-9a0ec00bd38a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
     },
     {

@@ -37,7 +37,7 @@ let tour = [
 
 
 
-contain__title.innerText = "여행지를 알려주세요";
+contain__title.innerText = "어디로 떠나고 싶으세요?";
 
 for(let i =0; i<tour.length; i++){
     const divTag = document.createElement('div');

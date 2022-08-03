@@ -6,15 +6,15 @@ const europeData = [
         img:"https://images.unsplash.com/photo-1581930407536-ba4fd42d4332?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1752&q=80",
         link: "https://map.kakao.com/?q=%EC%97%AC%EC%9D%98%EB%8F%84%20%ED%95%9C%EA%B0%95",
         title: "밤이 가장 아름다운 도시",
-        description: "한강은 한반도 중부에 위치한 강으로, 대한민국의 국가 1급 하천이다. 북한강[3]과 남한강[4]이 경기도 양평군 양수리(두물머리)에서 만나 서울특별시를 통과하면서 김포 반도에서 황해로 들어간다.",
+        description: "한강은 대한민국의 수도 서울특별시를 가로지르는 강입니다. 특히 한강 위의 대교는 대한민국의 경제 발전을 상징하는 구도로도 매우 유명합니다. 한강대교위에서 바라보는 서울의 야경은 매우 아름답습니다.",
         linkTag: "여의도 한강"
     },
     {
         recommand: 1,
         img:"https://thumb.mtstarnews.com/06/2022/06/2022062215500437164_1.jpg",
         link:"https://map.kakao.com/?q=%EC%83%81%EC%95%94%EB%8F%99%20DMC",
-        title: "원전 안전 완전",
-        description: "A detective investigating a man's death in the mountains ends up meeting and developing feelings for the dead man's mysterious wife in the course of his dogged sleuthing.",
+        title: "내가 그렇게 나쁩니까?",
+        description: "서울은 많은 영화의 촬영 로케이션입니다. 어벤져스 에이지오브 울트론에서 울트론을 추격하는 장면은 서울에서 촬영되었습니다. 영화 헤어질 결심의 감독 박찬욱 감독은 서울 출생입니다.",
         linkTag: "헤어질 결심"
     },
     {
@@ -22,7 +22,7 @@ const europeData = [
         img:"https://images.unsplash.com/photo-1617108309814-3326655a165a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
         link:"https://map.kakao.com/?q=%ED%95%9C%EA%B0%95%EC%B2%A0%EA%B5%90",
         title: "세상에나 정말 넓은 철교입니다",
-        description: "서울특별시 용산구 이촌동(용산역)과 동작구 노량진동(노량진역)을 잇는 길이 1,110m의 철도 전용 교량이다. 한강에 건설된 최초의 다리로, 총 4개의 교량으로 이루어져 있다. 한강대교라고 알고 있는 경우가 있는데 한강대교는 한강에 건설된 최초의 인도교이다. 한강철교의 구간은 '용산구 이촌동 172-1'번지 쪽 도로부터 노들로 쪽까지이다. 관리는 전 구간 한국철도공사 서울본부에서 담당한다.",
+        description: "서울특별시 용산구 이촌동과 동작구 노량진동을 잇는 길이 1,110m의 철도 전용 교량입니다. 한강에 건설된 최초의 다리로, 총 4개의 교량으로 이루어져 있습니다.",
         linkTag: "한강철교"
     },
 ];
