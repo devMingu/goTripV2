@@ -102,9 +102,9 @@ const contentData = [
         img: "https://image.bugsm.co.kr/album/images/1000/204506/20450649.jpg"
     },
     {
-        mainTitle: "소녀는 왜 불도저에 탔을까요",
-        subTitle: "스카이캐슬 김혜윤 주연",
-        img: "https://img.wavve.com/movieImg/MV_C901/4/MV_C901_SG0000147684_w720_h1080_q75.jpg"
+        mainTitle: "비오는 날 즐기는 영화",
+        subTitle: "바다로간 산적",
+        img: "https://img.wavve.com/movieImg/MovieGroup/2021/GMV_CI01_LE0000011115-Vertical_LogoY_w720_h1080_q75.jpg"
     },
 ];
 
