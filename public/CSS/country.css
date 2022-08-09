@@ -90,7 +90,7 @@ header img{
     /* background-color: rgb(138, 108, 69); */
 }
 .countryContent img{
-    max-width: 400px;
+    max-width: 768px;
     width: 100%;
     height: 366px;
 }
@@ -152,6 +152,7 @@ button{
     color:#f9b700;
 }
 
+
 @media only screen and (min-width: 768px) {
     .titlePostion{
         top:7%;
@@ -159,10 +160,11 @@ button{
     .countryContent img{
         max-width: 800px;
         width: 100%;
-        height: 550px;
+        height: 450px;
     }
     .countryContent{
-        height: 900px;
+        height: 630px;
+        padding:10px;
     }
     .slide__container{
         display: flex;
@@ -174,10 +176,23 @@ button{
         max-width: 1200px;
     }
     .slideContent img{
-        width: 400px;
-        height: 400px;
+        width: 250px;
+        height: 250px;
     }
     .slide_title{
-        font-size: 30px;
+        font-size: 25px;
+    }
+    .c_title{
+        margin-top: 5px;
+        font-size: 2rem;
+    }
+    .countryContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+        /* background-color: rgb(138, 108, 69); */
     }
 }

@@ -21,6 +21,11 @@ const contentData = [
         subTitle: "오로라를 쫓으러 가볼까요?!",
         img: "https://images.unsplash.com/photo-1604608672516-f1b9b1d37076?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1532&q=80"
     },
+    {
+        mainTitle: "북극권의 아름다운 풍경",
+        subTitle: "자연과 어우러지는 생활",
+        img: "https://images.unsplash.com/photo-1475066392170-59d55d96fe51?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    },
 
 ];
 

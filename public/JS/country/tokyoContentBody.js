@@ -11,10 +11,10 @@ const europeData = [
     },
     {
         recommand: 1,
-        img:"https://images.unsplash.com/photo-1587653263995-422546a7a569?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1636&q=80",
+        img:"https://images.unsplash.com/photo-1531219572328-a0171b4448a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
         link:"https://highstreetitalia.com/",
-        title: "푸근함 포근함 파르르",
-        description: "일본 영화 특유의 감성을 느껴볼 수 있는 공간입니다. 일본 애니메이션 속 공간을 찾아보는 여행도 꽤 재밌는 여행이 될 것 같지 않나요?",
+        title: "도쿄의 거대한 빌딩 숲",
+        description: "세계 경제의 중심지 도쿄의 거대한 빌딩 숲은 도쿄가 금융도시라는것을 입증합니다. 다음 종이의 집은 도쿄를 방문할까요?",
         linkTag: "도쿄 403-2"
     },
     {

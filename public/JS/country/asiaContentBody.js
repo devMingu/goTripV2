@@ -3,7 +3,7 @@ const countyContentBody = document.querySelector(".countyContentBody");
 const asiaData = [
     {
         recommand: 1,
-        img:"https://images.unsplash.com/photo-1599033769063-fcd3ef816810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80",
+        img:"https://images.unsplash.com/photo-1540998145333-e2eef1a9822d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1983&q=80",
         link: "https://korean.visitseoul.net/index",
         title: "과거에 귀를 귀울이다",
         description: "경복궁은 조선 시대에 지어진 왕궁 중 가장 큰 궁궐입니다. 개국공신 정도전은 태조로부터 첫 번째 궁궐의 이름을 지으라는 명을 받았고, 고심끝에 '새 왕조가 큰 복을 누려 번영할 것'이라는 의미로 경복궁(景福宮)이라는 이름을 붙였습니다.",

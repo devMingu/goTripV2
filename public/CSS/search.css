@@ -113,13 +113,13 @@ i {
     width: 200px;
   }
   .search__activity {
-    font-size: 20px;
+    font-size: 19px;
   }
   .search__hotel {
-    font-size: 20px;
+    font-size: 19px;
   }
   .contain1 i{
-      font-size: 20px;
+      font-size: 19px;
   }
   .searchContainer {
     height: auto;
@@ -133,27 +133,29 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* background-color: azure; */
     width: 90%;
     height: 100%;
   }
   .contain2 {
-    height: 500px;
+    height: 350px;
     margin-top:3%;
+    /* background-color: beige; */
   }
   .tourListBox img {
     border-radius: 10px;
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
   }
   .divLocation {
-    font-size: 25px;
+    font-size: 17px;
   }
   .searchOptionBox {
     align-items: center;
-    height: 70px;
+    height: 55px;
     padding: 20px;
     border-radius: 11px;
-    font-size: 20px;
+    font-size: 17px;
     margin-top:1%;
   }
   .contain2__title {
@@ -165,7 +167,7 @@ i {
 
   .searchFotterBox {
     width: 90%;
-    height: 80px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,7 +178,7 @@ i {
     display: flex;
     justify-content: center;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 17px;
   }
 }
 

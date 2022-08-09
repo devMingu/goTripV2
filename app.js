@@ -31,6 +31,7 @@ const location = {
     '도쿄' : 'tokyo',
     '트롬소': 'tromso'
 }
+let loc = "";
 
 app.get('/goTrip', (req, res)=>{
     res.render('trip/home');
@@ -90,10 +91,14 @@ app.get('/goTrip/mediterraneanSea', (req, res)=>{
     res.render('trip/mediterraneanSea');
 })
 app.post('/goTrip', (req, res)=>{
-    const loc = req.body.search.location;
+    loc = req.body.search.location;
     res.redirect(`/goTrip/${location[loc]}`);
 })
 
+app.use('/', (req, res)=>{
+    res.render('error/error', {error_loc: loc});
+    // loc = ""
+})
 
 app.listen(port, ()=>{
     console.log(`LISTENING ON PORT ${port}`);
