@@ -134,7 +134,18 @@ header{
     opacity: 0.5;
     font-size: 15px;
 }
-
+.minimumTemp{
+    color:rgb(117, 198, 128);
+}
+.maximumTemp{
+    color:red;
+}
+.currentTemp{
+    color:rgb(0, 0, 0);
+}
+.currentWeatherStatus{
+    font-family: 'Roboto', sans-serif;
+}
 @media only screen and (min-width: 767px) {
     .homeDropDown{
         padding-left: 15px;

@@ -5,6 +5,7 @@ const url = `https://api.openweathermap.org/data/2.5/weather?q=${city[2]}&appid=
 
 const minTemperature = document.querySelector('.minimumTemp');
 const maxTemperature = document.querySelector('.maximumTemp');
+const currentTemp = document.querySelector('.currentTemp');
 const currentWeatherStatus = document.querySelector('.currentWeatherStatus');
 
 
@@ -15,12 +16,17 @@ const requestWeather = async () => {
 
     const city_weather = {
         name: data.name,
+        temp: data.main.temp,
         minTemp: data.main.temp_min,
         maxTemp: data.main.temp_max,
         currentWeather: data.weather[0].main
     };
+
+    console.log(city_weather.temp);
     minTemperature.textContent = `${Math.floor(city_weather.minTemp - 273.15)} ° C`;
     maxTemperature.textContent = `${Math.floor(city_weather.maxTemp - 273.15)} ° C`;
+    currentTemp.textContent = `${Math.floor(city_weather.temp - 273.15)} ° C`;
+
     currentWeatherStatus.textContent = `${city_weather.name}의 현재 날씨는 ${city_weather.currentWeather}`;
     return city_weather;
 };
