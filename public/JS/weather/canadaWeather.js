@@ -23,9 +23,9 @@ const requestWeather = async () => {
     };
 
     console.log(city_weather.temp);
-    minTemperature.textContent = `${Math.floor(city_weather.minTemp - 273.15)} ° C`;
-    maxTemperature.textContent = `${Math.floor(city_weather.maxTemp - 273.15)} ° C`;
-    currentTemp.textContent = `${Math.floor(city_weather.temp - 273.15)} ° C`;
+    minTemperature.textContent = `${Math.floor(city_weather.minTemp - 273.15)} °C`;
+    maxTemperature.textContent = `${Math.floor(city_weather.maxTemp - 273.15)} °C`;
+    currentTemp.textContent = `${Math.floor(city_weather.temp - 273.15)} °C`;
 
     currentWeatherStatus.textContent = `${city_weather.name}의 현재 날씨는 ${city_weather.currentWeather}`;
     return city_weather;
