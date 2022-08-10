@@ -136,12 +136,15 @@ header{
 }
 .minimumTemp{
     color:rgb(117, 198, 128);
+    font-family: 'Roboto', sans-serif;
 }
 .maximumTemp{
     color:red;
+    font-family: 'Roboto', sans-serif;
 }
 .currentTemp{
     color:rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
 }
 .currentWeatherStatus{
     font-family: 'Roboto', sans-serif;

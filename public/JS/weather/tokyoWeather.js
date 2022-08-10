@@ -12,7 +12,7 @@ const currentWeatherStatus = document.querySelector('.currentWeatherStatus');
 const requestWeather = async () => {
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
 
     const city_weather = {
         name: data.name,
@@ -22,7 +22,7 @@ const requestWeather = async () => {
         currentWeather: data.weather[0].main
     };
 
-    console.log(city_weather.temp);
+    // console.log(city_weather.temp);
     minTemperature.textContent = `${Math.floor(city_weather.minTemp - 273.15)} ° C`;
     maxTemperature.textContent = `${Math.floor(city_weather.maxTemp - 273.15)} ° C`;
     currentTemp.textContent = `${Math.floor(city_weather.temp - 273.15)} ° C`;
@@ -31,7 +31,11 @@ const requestWeather = async () => {
     return city_weather;
 };
 
+
 requestWeather();
+setInterval(()=>{
+    requestWeather();
+}, 1000);
 
 
 
