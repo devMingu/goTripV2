@@ -1,5 +1,5 @@
 const key = "c774d9733ea7794532a35eab233c5877";
-const city = ['osaka', 'seoul', 'vancouver', 'california', 'oslo', 'valletta', 'paris']
+const city = ['osaka', 'seoul', 'vancouver', 'california', 'tromso', 'valletta', 'paris']
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city[4]}&appid=${key}`;
 
 

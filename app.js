@@ -51,6 +51,9 @@ app.get('/goTrip/seoul', (req, res)=>{
 app.get('/goTrip/tokyo', (req, res)=>{
     res.render('trip/tokyo');
 })
+app.get('/goTrip/mediterraneanSea', (req, res)=>{
+    res.render('trip/mediterraneanSea');
+})
 app.get('/goTrip/tromso', (req, res)=>{
     res.render('trip/tromso');
 })
@@ -87,9 +90,6 @@ app.get('/goTrip/homeParis', (req, res)=>{
 //     await data.save();
 //     res.render("trip/userInfo", {data: req.body.user});
 // })
-app.get('/goTrip/mediterraneanSea', (req, res)=>{
-    res.render('trip/mediterraneanSea');
-})
 app.post('/goTrip', (req, res)=>{
     loc = req.body.search.location;
     res.redirect(`/goTrip/${location[loc]}`);
@@ -97,7 +97,6 @@ app.post('/goTrip', (req, res)=>{
 
 app.use('/', (req, res)=>{
     res.render('error/error', {error_loc: loc});
-    // loc = ""
 })
 
 app.listen(port, ()=>{
