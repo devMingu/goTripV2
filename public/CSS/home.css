@@ -43,7 +43,7 @@ a {
   height: 50%;
   color: white;
 }
-.navbar_Search {
+/* .navbar_Search {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,6 +52,21 @@ a {
   height: 80%;
   border-radius: 30px;
   box-shadow: 1px 1px 1px 2px rgba(128, 128, 128, 0.2);
+
+  background-color: white;
+} */
+.navbar_Search {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 90%;
+  height: 40px;
+  border-radius: 30px;
+  box-shadow: 1px 1px 1px 2px rgba(128, 128, 128, 0.2);
+
+  background-color: white;
 }
 .navbar_left {
   display: flex;

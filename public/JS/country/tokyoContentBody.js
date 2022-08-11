@@ -5,7 +5,7 @@ const europeData = [
         recommand: 1,
         img:"https://images.unsplash.com/photo-1503899036084-c55cdd92da26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80",
         link: "https://kr.france.fr/ko",
-        title: "반갑습니다 도쿄입니다.",
+        title: "반갑습니다 도쿄입니다",
         description: "뉴욕, 런던과 함께 세계 3대 도시중 하나인 도쿄는 먼 과거에 무사시노쿠니의 도시마군이었지만 11세기 헤이안 시대 후반부터 에도라고 불렸습니다. 이 작은 해안 마을은 도쿠가와 이에야스가 에도 막부를 세우고 일본의 핵심 도시가 되었습니다.",
         linkTag: "도쿄 중심지"
     },

@@ -15,7 +15,6 @@ header img{
     height: 23rem;
     max-width: 800px;
 }
-
 .titlePostion{
     display: flex;
     justify-content: center;
@@ -145,10 +144,14 @@ button{
 .slide_title{
     margin-left: 20px;
 }
+.goBackBox{
+    width: 100%;
+    position:fixed;
+}
 .goBack{
     position:absolute;
-    top:13px;
-    left:15px;
+    top:20px;
+    left:10px;
     color:#f9b700;
 }
 

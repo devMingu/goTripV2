@@ -10,11 +10,11 @@ const homeContent = [
     img: "https://images.unsplash.com/photo-1529066516367-36973222c957?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
   },
   {
-    title: ["어디든 같이 떠날까요?", "길 따라 가는 목적지 없는 여행"],
+    title: ["어디든 같이 떠날까요?", "길 따라 목적지 없는 여행"],
     img: "https://images.unsplash.com/photo-1520962922320-2038eebab146?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80",
   },
   {
-    title: ["아름다운 숙소와 함께 떠나는 여행", "그림같이 아름다운 숙소"],
+    title: ["아름다운 숙소 함께 떠나는 여행", "그림같이 아름다운 숙소"],
     img: "https://images.unsplash.com/photo-1575517111478-7f6afd0973db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
   },
 ];
