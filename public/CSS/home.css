@@ -20,11 +20,13 @@ a {
   width: 90%;
 }
 .navbar {
+  position:sticky;
+  top:0px;
   display: flex;
   justify-content: center;
   width: 100%;
   height: 120px;
-  /* background-color: rgb(255, 157, 157); */
+  background-color: white;
   max-width: 750px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
@@ -43,7 +45,7 @@ a {
   height: 50%;
   color: white;
 }
-/* .navbar_Search {
+.navbar_Search {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,8 +56,8 @@ a {
   box-shadow: 1px 1px 1px 2px rgba(128, 128, 128, 0.2);
 
   background-color: white;
-} */
-.navbar_Search {
+}
+/* .navbar_Search {
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -67,7 +69,7 @@ a {
   box-shadow: 1px 1px 1px 2px rgba(128, 128, 128, 0.2);
 
   background-color: white;
-}
+} */
 .navbar_left {
   display: flex;
   align-items: center;
