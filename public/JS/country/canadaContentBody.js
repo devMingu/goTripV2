@@ -60,8 +60,11 @@ for(let i=0; i<asiaData.length; i++){
 
 
     divTitle.textContent = asiaData[i].title;
-    
     pTag.textContent = asiaData[i].description;
+
+    divTitle.classList.add('engFontStyle');
+    pTag.classList.add('engFontStyle');
+    textTag.classList.add('engFontStyle');
 
     aTag.href = asiaData[i].link;
     aTag.target = "_blank";
