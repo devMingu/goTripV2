@@ -59,6 +59,13 @@ header img{
     color:transparent;
     -webkit-background-clip: text;   
 }
+.gradiantCanada{
+    background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:transparent;
+    -webkit-background-clip: text; 
+
+    
+}
 
 .countryBodyContainer{
     width: 100%;
