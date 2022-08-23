@@ -23,9 +23,18 @@ a{
     align-items: center;
     max-width: 1920px;
     width: 100%;
-    height: 700px;
+    /* height: 700px; */
+    min-height: 896px;
+    max-height: 1300px;
     background-image: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80");
     color:white;
+}
+.testUrl{
+    animation: textOpacity ease-in-out 1s;
+    background-image: url("https://images.unsplash.com/photo-1519414442781-fbd745c5b497?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1764&q=80");
+}
+.hide{
+    visibility: hidden;
 }
 .tripTitleContentBox{
     display: flex;
@@ -36,6 +45,7 @@ a{
 .tripContentOneTitle{
     font-size: 45px;
     font-weight: bold;
+    animation: textOpacity ease-in-out 0.7s;
 }
 .tripContentSubTitle{
     display: flex;
@@ -43,12 +53,14 @@ a{
     /* background-color: #000000; */
     margin-top: 15px;
     width: 100%;
+    animation: textOpacity ease-in-out 0.7s;
 }
-.phoneBox{
+.spainCampingIcon{
     margin-top:50px;
+    animation: textOpacity ease-in-out 0.7s;
 }
-.phoneBox i{
-    font-size: 300px;
+.spainCampingIcon i{
+    font-size: 400px;
     background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color:transparent;
     -webkit-background-clip: text;
@@ -155,5 +167,10 @@ a{
     .phoneBox{
         margin:0px;
     }
-    
+}
+
+
+@keyframes textOpacity{
+    from {opacity: 0.3;}
+    to {opacity: 1;}
 }
