@@ -29,7 +29,7 @@ const spainContextDate = [
 
 const iconClick = () => {
     console.log("ICON CLICKED");
-    spainCampingIcon.classList.toggle('hide');
+    // spainCampingIcon.classList.toggle('hide');
 
     const ran = Math.floor(Math.random() * 3);
     console.log(ran);
