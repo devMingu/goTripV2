@@ -99,6 +99,7 @@ app.get('/goTrip/homeParis', (req, res)=>{
 //     await data.save();
 //     res.render("trip/userInfo", {data: req.body.user});
 // })
+
 app.post('/goTrip', (req, res)=>{
     loc = req.body.search.location;
     res.redirect(`/goTrip/${location[loc]}`);
