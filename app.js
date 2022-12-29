@@ -33,6 +33,9 @@ const location = {
 }
 let loc = "";
 
+app.get('/', (req, res)=>{
+    res.render('trip/home');
+})
 app.get('/goTrip', (req, res)=>{
     res.render('trip/home');
 })
