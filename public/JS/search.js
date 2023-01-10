@@ -36,7 +36,6 @@ let tour = [
 ];
 
 
-
 contain__title.innerText = "어디로 떠나고 싶으세요?";
 
 for(let i =0; i<tour.length; i++){

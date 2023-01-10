@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/CSS/register.css" />
+    <title>로그인 - GoTrip</title>
+  </head>
+  <body>
+    <section class="register__input__container">
+      <div>로그인 화면</div>
+      <section class="register__input__box">
+        <form method="POST" action="/goTrip/login">
+          <div class="register__input__box">
+            <label for="email">이메일이 어떻게 되시나요?</label>
+            <input name="user[userEmail]" id="email" type="email" placeholder="이메일을 입력하세요." required/>
+          </div>
+          <div>
+              <button>로그인하기</button>
+            </div>
+        </form>
+      </section>
+    </section>
+
+    <script src="../../public/JS/login.js"></script>
+  </body>
+</html>

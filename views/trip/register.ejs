@@ -14,10 +14,8 @@
     <title>가입하기 - GoTrip</title>
   </head>
   <body>
-    <h3>죄송합니다 현재는 지원하지 않는 기능입니다.</h3>
-    <a href="/goTrip">홈으로</a>
     <!-- <div id="map" style="width: 500px; height: 400px"></div> -->
-    <!-- <section class="register__title_container">
+    <section class="register__title_container">
       <div class="register__logo">
         <i class="fab fa-airbnb"></i>
         <div>GoTrip</div>
@@ -38,14 +36,10 @@
     <section class="register__input__container">
       <div>이메일 주소로 가입하기</div>
       <section class="register__input__box">
-        <form method="POST" action="/goTrip/register">
+        <form method="POST" action="/goTrip">
           <div class="register__input__box">
-            <label for="firstName">이름이 어떻게 되시나요?</label>
-            <input name="user[userFirstName]" id="firstName" type="text" placeholder="이름을 입력하세요." required/>
-          </div>
-          <div class="register__input__box">
-            <label for="lastName">성이 어떻게 되시나요?</label>
-            <input name="user[userLastName]" id="lastName" type="text" placeholder="성을 입력하세요." required/>
+            <label for="userNickName">닉네임을 설정해주세요</label>
+            <input name="user[userNickName]" id="userNickName" type="text" placeholder="닉네임을 입력하세요." required/>
           </div>
           <div class="register__input__box">
             <label for="sex">성별이 어떻게 되시나요?</label>
@@ -84,7 +78,7 @@
             </div>
         </form>
       </section>
-    </section> -->
+    </section>
 
 
     
@@ -115,9 +109,9 @@
             navigator.geolocation.getCurrentPosition(success);
         }
 
-        getUserLocation();
+        getUserLocation(); -->
 
-    </script> -->
+    <!-- </script> -->
 
     <script src="/JS/register.js"></script>
   </body>

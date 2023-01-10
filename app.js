@@ -3,17 +3,16 @@ const app = express();
 const engine = require('ejs-mate');
 const path = require('path');
 const port = process.env.PORT || 3000;
-// const mongoose = require('mongoose');
-// const Userdata = require('./model/userModel/userData');
-// mongoose.connect('mongodb://localhost:27017/goTrip');
-// mongoose.connect(process.env.MONGO_DB);
-// mongoose.connect("mongodb+srv://wintermingu12:!Mrlaalsrn12@dbgotripuser.enhtf48.mongodb.net/?retryWrites=true&w=majority");
-// const db = mongoose.connection;
+const mongoose = require('mongoose');
+const Userdata = require('./model/userModel/userData');
+mongoose.connect("mongodb+srv://wintermingu12:!Mrlaalsrn12@dbgotripuser.enhtf48.mongodb.net/test");
 
-// db.on("error", console.error.bind(console, "connection error:"));
-// db.once("open", () => {
-//     console.log("Database connected");
-// });
+const db = mongoose.connection;
+
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", () => {
+    console.log("Database connected");
+});
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -36,7 +35,18 @@ let loc = "";
 app.get('/', (req, res)=>{
     res.render('trip/home');
 })
-app.get('/goTrip', (req, res)=>{
+app.get('/goTrip', async (req, res)=>{
+    // res.clearCookie(req.headers.cookie , { path : '/goTrip'});
+    // if (req.headers.cookie) {
+    //     const len = req.headers.cookie.length;
+    //     const pathLog = req.headers.cookie.slice(3, len+1);
+    //     console.log(pathLog);
+    //     res.render('trip/home', {title: "로그아웃하기", pathId: `/goTrip/userInfo/${pathLog}`});
+    // }
+    // else {
+    //     console.log("EOLLO");
+    //     res.render('trip/home', {title: "서치하기", pathId: "/goTrip/search"});
+    // }
     res.render('trip/home');
 })
 app.get('/goTrip/search', (req, res)=>{
@@ -69,9 +79,31 @@ app.get('/goTrip/movieTour', (req, res)=>{
 app.get('/goTrip/tripContent', (req, res)=>{
     res.render('trip/tripContent');
 })
+
 app.get('/goTrip/register', (req, res)=>{
     res.render('trip/register');
 });
+app.post('/goTrip', async (req, res)=>{
+    const data = new Userdata(req.body.user);
+    await data.save();
+    res.redirect(`/goTrip/userInfo/${data._id}`);
+    // res.render("trip/userInfo", {data: req.body.user});
+})
+app.get('/goTrip/userInfo/:id', async (req, res) => {
+    const {id} = req.params;
+    const data = await Userdata.findById(id);
+    res.render('trip/userInfo', {data});
+})
+app.get('/goTrip/login', (req, res)=>{
+    res.render('trip/login');
+});
+app.post('/goTrip/login', async (req, res)=>{
+    const userData = await Userdata.find( {userEmail : `${req.body.user.userEmail}`});
+    // res.setHeader('Set-Cookie', `id=${userData[0]._id}; path=/goTrip`);
+    res.redirect(`/goTrip`);
+    // res.redirect(`/goTrip/userInfo/${userData[0]._id}`);
+});
+
 app.get('/goTrip/homeJapan', (req, res)=>{
     res.render('homeCountry/homeJapan');
 });
@@ -94,16 +126,8 @@ app.get('/goTrip/homeParis', (req, res)=>{
     res.render('homeCountry/homeParis');
 });
 
-// app.post('/goTrip/register', async (req, res)=>{
-//     const data = new Userdata(req.body.user);
-//     await data.save();
-//     res.render("trip/userInfo", {data: req.body.user});
-// })
 
-app.post('/goTrip', (req, res)=>{
-    loc = req.body.search.location;
-    res.redirect(`/goTrip/${location[loc]}`);
-})
+
 
 app.use('/', (req, res)=>{
     res.render('error/error', {error_loc: loc});

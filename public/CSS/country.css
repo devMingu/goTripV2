@@ -123,6 +123,10 @@ button{
     margin-top: 0;
     overflow: scroll;
 }
+.slideContent::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
 .slideContent img{
     width: 280px;
     height: 280px;
@@ -140,6 +144,7 @@ button{
     margin: 10px;
     margin-top: 0px;
 }
+
 .slid__flex__wrap{
     display: flex;
     flex-direction: row;

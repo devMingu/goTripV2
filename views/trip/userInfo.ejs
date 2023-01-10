@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/CSS/userInfo.css" />
-    <title>의 정보</title>
+    <title><%- data.userNickName %>의 정보</title>
   </head>
   <body>
     <section class="profile__container">
@@ -19,7 +19,7 @@
         <div class="profile__box">
           <div><img src="<%- data.userProfileImage %>" alt="" /></div>
           <div class="profile__info__text">
-            <h1><%- data.userFirstName %> <%- data.userLastName %></h1>
+            <h1><%- data.userNickName %></h1>
             <span>Travel is my life</span>
           </div>
         </div>
