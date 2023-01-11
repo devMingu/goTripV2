@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const app = express();
 const engine = require('ejs-mate');
 const path = require('path');
@@ -20,6 +21,12 @@ app.engine('ejs', engine);
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
+app.use(session({
+    secret: '12345',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}))
 
 const location = {
     '유럽': 'europe',
@@ -36,21 +43,10 @@ app.get('/', (req, res)=>{
     res.render('trip/home');
 })
 app.get('/goTrip', async (req, res)=>{
-    // res.clearCookie(req.headers.cookie , { path : '/goTrip'});
-    // if (req.headers.cookie) {
-    //     const len = req.headers.cookie.length;
-    //     const pathLog = req.headers.cookie.slice(3, len+1);
-    //     console.log(pathLog);
-    //     res.render('trip/home', {title: "로그아웃하기", pathId: `/goTrip/userInfo/${pathLog}`});
-    // }
-    // else {
-    //     console.log("EOLLO");
-    //     res.render('trip/home', {title: "서치하기", pathId: "/goTrip/search"});
-    // }
     res.render('trip/home');
 })
 app.get('/goTrip/search', (req, res)=>{
-    res.render('trip/search');
+    req.session["userID"] ? res.render(`trip/search`, {title:"로그아웃", ref:`/goTrip/userInfo/${req.session["userID"]}`, subTitle: "내 정보"}) : res.render('trip/search', {title: "회원가입", ref:"/goTrip/movieTour", subTitle: "영화 어디서 찍었지?"});
 })
 app.get('/goTrip/asia', (req, res)=>{
     res.render('trip/asia');
@@ -85,9 +81,9 @@ app.get('/goTrip/register', (req, res)=>{
 });
 app.post('/goTrip', async (req, res)=>{
     const data = new Userdata(req.body.user);
+    req.session["userID"] = data._id;
     await data.save();
     res.redirect(`/goTrip/userInfo/${data._id}`);
-    // res.render("trip/userInfo", {data: req.body.user});
 })
 app.get('/goTrip/userInfo/:id', async (req, res) => {
     const {id} = req.params;
@@ -99,10 +95,14 @@ app.get('/goTrip/login', (req, res)=>{
 });
 app.post('/goTrip/login', async (req, res)=>{
     const userData = await Userdata.find( {userEmail : `${req.body.user.userEmail}`});
-    // res.setHeader('Set-Cookie', `id=${userData[0]._id}; path=/goTrip`);
-    res.redirect(`/goTrip`);
-    // res.redirect(`/goTrip/userInfo/${userData[0]._id}`);
+    req.session["userID"] = userData[0]._id;
+    res.redirect(`/goTrip/search`);
 });
+app.post('/goTrip/logout', async (req, res) => {
+    console.log("LOGOUT");
+    req.session.destroy();
+    res.redirect('/goTrip/search');
+})
 
 app.get('/goTrip/homeJapan', (req, res)=>{
     res.render('homeCountry/homeJapan');

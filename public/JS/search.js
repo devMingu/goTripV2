@@ -1,5 +1,7 @@
 const tourList = document.querySelector(".searchList");
 const contain__title = document.querySelector(".contain2__title");
+const regisLogout = document.querySelector('.regisLogout');
+const regisLogoutForm = document.querySelector('.regisLogoutForm');
 
 let backgroundFlag = 0;
 let tour = [
@@ -52,4 +54,21 @@ for(let i =0; i<tour.length; i++){
     divTag.appendChild(divLocationTag);
     divTag.classList.add('tourListBox');
     tourList.appendChild(divTag);
+}
+
+const toRegister = () => {
+    regisLogoutForm.attributes.method.nodeValue = "GET";
+    regisLogoutForm.attributes.action.nodeValue = "/goTrip/register"
+}
+
+const toLogout = () => {
+    regisLogoutForm.attributes.method.nodeValue = "POST";
+    regisLogoutForm.attributes.action.nodeValue = "/goTrip/logout";
+}
+
+if (regisLogout.innerText === "회원가입") {
+    toRegister();
+}
+else {
+    toLogout();
 }

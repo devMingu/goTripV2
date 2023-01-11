@@ -64,18 +64,23 @@
         <div class="contain3">
           <div class="searchOptionBox travelTour">
             <div class="search travelDestination">영화</div>
-            <a href="/goTrip/movieTour"><div>영화속 장면 어디서 찍었지?</div></a>
+            <!-- <a href="/goTrip/movieTour"><div>영화속 장면 어디서 찍었지?</div></a> -->
+            <a href="<%- ref %>"><div><%- subTitle %></div></a>
           </div>
           <div class="searchOptionBox activityTour">
             <div>체험</div>
-            <a href="/goTrip/tripContent"><div>로그인 하기</div></a>
+            <a href="/goTrip/tripContent"><div>스페인 여행하기</div></a>
           </div>
         </div>
       </section>
       
       <section class="searchFotterBox">
         <div class="searchFooter">
-          <div><a href="/goTrip/register">당신을 알려주세요</a></div>
+          <!-- js를 통해서 값을 받아옴  -->
+          <form method="GET" action="/goTrip/register" class="regisLogoutForm">
+            <!-- <div class="regisLogout"><a class="registOrLogout"></a></div> -->
+            <button class="regisLogout"> <%- title %> </button>
+          </form>
           <!-- <div>당신을 알려주세요</div> -->
         </div>
       </section>

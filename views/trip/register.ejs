@@ -23,17 +23,18 @@
       <div class="register__head__title">가입하고 찾아보세요</div>
       <div class="register__btn__box">
         <div class="login__round__box login__postion__box login__facebook">
-          <i class="fab fa-facebook"></i>
-          Facebook으로 가입하기
+          <a class="login_href" href="/goTrip/login">로그인하기</a>
+          <!-- <i class="fab fa-facebook"></i>
+          Facebook으로 가입하기 -->
         </div>
         <div class="login__round__box login__postion__box login__google">
           <i class="fab fa-google"></i>
-          Google로 가입하기
+          회원가입하기
         </div>
       </div>
     </section>
 
-    <section class="register__input__container">
+    <section class="register__input__container register__input__container__display">
       <div>이메일 주소로 가입하기</div>
       <section class="register__input__box">
         <form method="POST" action="/goTrip">
@@ -82,36 +83,7 @@
 
 
     
-    <!-- <script
-      type="text/javascript"
-      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=158a2a1f18a17c92ab71711aeac3b7ca"
-    ></script>
-    <script>
-      // var container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
-      // var options = {
-      //   //지도를 생성할 때 필요한 기본 옵션
-      //   center: new kakao.maps.LatLng(latitude, longitude), //지도의 중심좌표.
-      //   level: 3, //지도의 레벨(확대, 축소 정도)
-      // };
 
-      // var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-      function success({ coords, timestamp }) {
-            const latitude = coords.latitude;   // 위도
-            const longitude = coords.longitude; // 경도
-            
-            alert(`위도: ${latitude}, 경도: ${longitude}, 위치 반환 시간: ${timestamp}`);
-        }
-
-        function getUserLocation() {
-            if (!navigator.geolocation) {
-                throw "위치 정보가 지원되지 않습니다.";
-            }
-            navigator.geolocation.getCurrentPosition(success);
-        }
-
-        getUserLocation(); -->
-
-    <!-- </script> -->
 
     <script src="/JS/register.js"></script>
   </body>

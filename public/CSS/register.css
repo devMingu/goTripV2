@@ -52,12 +52,18 @@ body{
     background-color: rgb(115, 115, 255);
     color: white;
 }
+.login_href{
+    color: white;
+    text-decoration: none;
+}
 .login__google{
     background-color: transparent;
     border: 2px solid black;
 }  
 
-
+.register__input__container__display {
+    visibility: hidden;
+}
 .register__input__container{
     display: flex;
     flex-direction: column;
