@@ -6,7 +6,7 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const Userdata = require('./model/userModel/userData');
-const mongoURL = process.env.MONGODB_URL;
+const mongoURL = process.env.MONGODB_URI;
 mongoose.connect(mongoURL);
 const db = mongoose.connection;
 
@@ -15,6 +15,7 @@ db.once("open", () => {
     console.log("Database connected");
 });
 
+mongoose.set('strictQuery', true);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', engine);
