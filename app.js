@@ -6,8 +6,7 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const Userdata = require('./model/userModel/userData');
-const mongoURL = process.env.MONGODB_URL || "mongodb+srv://wintermingu12:!Mrlaalsrn12@dbgotripuser.enhtf48.mongodb.net/test";
-// mongoose.connect("mongodb+srv://wintermingu12:!Mrlaalsrn12@dbgotripuser.enhtf48.mongodb.net/test");
+const mongoURL = process.env.MONGODB_URL;
 mongoose.connect(mongoURL);
 const db = mongoose.connection;
 
