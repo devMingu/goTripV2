@@ -3,8 +3,8 @@ body{
     color:#023e8a;
 }
 img{
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     margin-right: 50px;
 }
@@ -86,4 +86,18 @@ img{
     font-weight: bold;
 }
 
-
+/* myPost */
+.myPost {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+    background-color: #263159;
+    width: 50%;
+    height: 3vh;
+}
+.myPost a {
+    color: #F2E7D5;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}

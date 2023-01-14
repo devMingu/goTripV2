@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/myPost.css" />
+    <title><%- name %>의 글</title>
+</head>
+<body>
+    <h1><%- name %>님이 작성한 글</h1>
+    <% for (let el of data) { %>
+        <section class="myPostConatiner">
+            <img src="<%- el.tripImg %>" alt="">
+            <div class="myPostInfoContainer">
+                <p>나만의 여행지 애칭</p>
+                <h1><%- el.tripNickName %></h1>
+                <p>지역</p>
+                <h3><%- el.tripLocation %></h3>
+                <p>추천 이유</p>
+                <h4><%- el.tripDesc %></h4>
+            </div>
+        </section>
+
+    <% } %>
+
+    <a href="/goTrip/userInfo/<%- data[0].userID %>">뒤로가기</a>
+</body>
+</html>

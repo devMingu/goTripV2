@@ -108,11 +108,20 @@ i {
   font-weight: bold;
 }
 
+.regisLogout{
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  padding: 8px;
+  color: white;
+  background-color: #0081C9;
+  color: #F8F4EA;
+  border-radius: 10px;
+}
 .activity {
   position: absolute;
   top: 8%;
 }
-
 @media only screen and (min-width: 750px) {
   .houseAndActive {
     width: 200px;
@@ -172,7 +181,7 @@ i {
 
   .searchFotterBox {
     width: 90%;
-    height: 50px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;

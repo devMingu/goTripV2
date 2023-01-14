@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/CSS/register.css" />
+    <title>가입하기 - GoTrip</title>
+  </head>
+  <body>
+    <!-- <div id="map" style="width: 500px; height: 400px"></div> -->
+    <section class="register__title_container">
+      <div class="register__logo">
+        <i class="fab fa-airbnb"></i>
+        <div>GoTrip</div>
+      </div>
+      <div class="register__head__title">여행지를 공유해주세요</div>
+      <div class="register__btn__box">
+        <div class="login__round__box login__postion__box login__google">
+          공유하기
+        </div>
+      </div>
+    </section>
+
+    <section class="register__input__container register__input__container__display">
+      <section class="register__input__box">
+        <form method="POST" action="/goTrip/recommandTrip">
+          <div class="register__input__box">
+            <label for="tripNickName">여행지에 별명을 붙여주세요</label>
+            <input name="trip[tripNickName]" id="tripNickName" type="text" placeholder="ex) ex. 허스키와 개썰매 타기" required/>
+          </div>
+          <div class="register__input__box">
+            <label for="tripLocation">위치가 어딘가요?</label>
+            <input name="trip[tripLocation]" id="tripLocation" type="text" placeholder="성별을 입력하세요." required/>
+          </div>
+          <div class="register__input__box">
+            <label for="tripImg">여행지 이미지를 사진 주소로 넣어주세요</label>
+            <input
+              name="trip[tripImg]"
+              id="tripImg"
+              type="text"
+              placeholder="사진의 주소를 넣어주세요."
+              required
+            />
+          </div>
+          <div class="register__input__box">
+            <label for="tripDesc">여행지에 대해서 알려주세요!</label>
+            <textarea name="trip[tripDesc]" id="tripDesc" cols="30" rows="10"></textarea>
+          </div>
+          <div>
+              <button>등록하기</button>
+            </div>
+        </form>
+      </section>
+    </section>
+
+
+    
+
+
+    <script src="/JS/register.js"></script>
+  </body>
+</html>

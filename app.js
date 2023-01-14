@@ -6,6 +6,8 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const Userdata = require('./model/userModel/userData');
+const Tripdata = require('./model/userModel/userTrip');
+const { ppid } = require('process');
 const mongoURL = process.env.MONGODB_URI;
 mongoose.connect(mongoURL);
 const db = mongoose.connection;
@@ -92,12 +94,17 @@ app.get('/goTrip/userInfo/:id', async (req, res) => {
     res.render('trip/userInfo', {data});
 })
 app.get('/goTrip/login', (req, res)=>{
-    res.render('trip/login');
+    res.render('trip/login', {error: ""});
 });
 app.post('/goTrip/login', async (req, res)=>{
     const userData = await Userdata.find( {userEmail : `${req.body.user.userEmail}`});
-    req.session["userID"] = userData[0]._id;
-    res.redirect(`/goTrip/search`);
+    if (userData.length === 0) {
+        res.render('trip/login', {error: "정확한 이메일을 입력해주세요"});
+    }
+    else {
+        req.session["userID"] = userData[0]._id;
+        res.redirect(`/goTrip/search`);
+    }
 });
 app.post('/goTrip/logout', async (req, res) => {
     console.log("LOGOUT");
@@ -125,6 +132,32 @@ app.get('/goTrip/homeNorway', (req, res)=>{
 });
 app.get('/goTrip/homeParis', (req, res)=>{
     res.render('homeCountry/homeParis');
+});
+
+app.get('/goTrip/recommandTrip', (req, res) => {
+    res.render('usersPost/recommandTrip');
+})
+app.post('/goTrip/recommandTrip', async (req, res) => {
+    console.log(`Now Session is ${req.session["userID"]}`);
+    const getDateData = new Date();
+    const date = getDateData.getFullYear().toString() + (getDateData.getMonth()+1).toString() + getDateData.getDate().toString() + getDateData.getHours().toString() + getDateData.getMinutes().toString() + getDateData.getSeconds().toString();
+    const postData = {
+        userID: req.session["userID"],
+        reportingDate: parseInt(date),
+        ...req.body.trip,
+    };
+    // res.redirect("/goTrip");
+    const tripData = new Tripdata(postData);
+    await tripData.save();
+    // console.log(tripData);
+    
+    res.redirect(`/goTrip/myPost/${tripData.userID}`);
+})
+app.get('/goTrip/myPost/:id', async (req, res)=>{
+    const { id } = req.params;
+    const data = await Tripdata.find({ userID: id});
+    const userName = await Userdata.find({ _id : id});
+    res.render('usersPost/myPost', {data, name: userName[0].userNickName});
 });
 
 
