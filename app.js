@@ -159,7 +159,10 @@ app.get('/goTrip/myPost/:id', async (req, res)=>{
     const userName = await Userdata.find({ _id : id});
     res.render('usersPost/myPost', {data, name: userName[0].userNickName});
 });
-
+app.get('/goTrip/allPost', async (req, res) => {
+    const allPost = await Tripdata.find({});
+    res.render('usersPost/allUserPost', {allPost});
+})
 
 
 
