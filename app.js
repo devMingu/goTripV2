@@ -7,7 +7,6 @@ const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const Userdata = require('./model/userModel/userData');
 const Tripdata = require('./model/userModel/userTrip');
-const { ppid } = require('process');
 const mongoURL = process.env.MONGODB_URI;
 mongoose.connect(mongoURL);
 const db = mongoose.connection;

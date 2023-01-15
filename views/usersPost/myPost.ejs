@@ -8,26 +8,28 @@
     <title><%- name %>의 글</title>
 </head>
 <body>
-    <h1><%- name %>님이 작성한 글</h1>
     <section class="myPostHeader">
+        <div class="myPostHeaderTextArea">
+            <h1><%- name %>님이 작성한 글</h1>
+        </div>
         <% for (let el of data) { %>
             <section class="myPostConatiner">
                 <div class="myPostImgDiv">
                     <img src="<%- el.tripImg %>" alt="">
                 </div>
                 <div class="myPostInfoContainer">
-                    <p>나만의 여행지 애칭</p>
+                    <h2><%- name %>님이 이야기하는 내용</h2>
                     <div><%- el.tripNickName %></div>
-                    <p>지역</p>
+                    <h2>지역은 어딘가요?</h2>
                     <div><%- el.tripLocation %></div>
-                    <p>추천 이유</p>
+                    <h2>지역 설명</h2>
                     <div><%- el.tripDesc %></div>
                 </div>
             </section>
     
-        <% } %>
+            <% } %>
+            <a href="/goTrip/userInfo/<%- data[0].userID %>">뒤로가기</a>
     </section>
 
-    <a href="/goTrip/userInfo/<%- data[0].userID %>">뒤로가기</a>
 </body>
 </html>

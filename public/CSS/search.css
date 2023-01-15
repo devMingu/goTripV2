@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color: rgb(255, 255, 255);
+  
 }
 a {
   text-decoration: none;
@@ -111,12 +112,14 @@ i {
 .regisLogout{
   border: none;
   border-bottom: 1px solid black;
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  width: 100px;
+  height: 40px;
   padding: 8px;
-  color: white;
-  background-color: #0081C9;
-  color: #F8F4EA;
-  border-radius: 10px;
+  background-color: #e9ecef;
+  color: #22223b;
+  border-radius: 5px;
 }
 .activity {
   position: absolute;
