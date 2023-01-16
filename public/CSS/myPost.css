@@ -11,6 +11,9 @@
     .myPostHeaderTextArea {
         visibility: hidden;
     }
+    .myPostHeader::-webkit-scrollbar {
+        display: none; 
+    }
     a {
         text-decoration: none;
         color: #e9ecef;
@@ -82,6 +85,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .myPostHeader::-webkit-scrollbar {
+        display: none; 
     }
     
     .myPostHeaderTextArea {
