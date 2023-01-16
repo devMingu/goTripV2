@@ -10,7 +10,7 @@
 <body>
     <section class="myPostHeader">
         <div class="myPostHeaderTextArea">
-            <h1><%- name %>님이 작성한 글</h1>
+            <h3><%- name %>님이 이야기하는 내용</h3>
         </div>
         <% for (let el of data) { %>
             <section class="myPostConatiner">
@@ -18,7 +18,6 @@
                     <img src="<%- el.tripImg %>" alt="">
                 </div>
                 <div class="myPostInfoContainer">
-                    <h2><%- name %>님이 이야기하는 내용</h2>
                     <div><%- el.tripNickName %></div>
                     <h2>지역은 어딘가요?</h2>
                     <div><%- el.tripLocation %></div>
@@ -26,7 +25,6 @@
                     <div><%- el.tripDesc %></div>
                 </div>
             </section>
-    
             <% } %>
             <a href="/goTrip/userInfo/<%- data[0].userID %>">뒤로가기</a>
     </section>

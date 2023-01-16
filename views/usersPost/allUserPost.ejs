@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/myPost.css" />
     <title>모든 유저들의 글</title>
 </head>
 <body>
-    <h1>모든 게시글</h1>
+    <!-- <h1>모든 게시글</h1> -->
+    <section class="myPostHeader">
+        <% for (let el of allPost) { %>
+            <section class="myPostConatiner">
+                <div class="myPostImgDiv">
+                    <img src="<%- el.tripImg %>" alt="">
+                </div>
+                <div class="myPostInfoContainer">
+                    <div><%- el.tripNickName %></div>
+                    <h2>지역은 어딘가요?</h2>
+                    <div><%- el.tripLocation %></div>
+                    <h2>지역 설명</h2>
+                    <div><%- el.tripDesc %></div>
+                </div>
+            </section>
+        <% }%>
+    </section>
 
-    <% for (let el of allPost) { %>
-        <section>
-            <h3><%- el.tripDesc %></h3>
-            <h3><%- el.tripNickName %></h3>
-        </section>
-    <% }%>
 </body>
 </html>

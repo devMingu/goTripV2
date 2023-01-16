@@ -50,6 +50,11 @@ app.get('/goTrip', async (req, res)=>{
 app.get('/goTrip/search', (req, res)=>{
     req.session["userID"] ? res.render(`trip/search`, {title:"로그아웃", ref:`/goTrip/userInfo/${req.session["userID"]}`, subTitle: "내 정보"}) : res.render('trip/search', {title: "회원가입", ref:"/goTrip/movieTour", subTitle: "영화 어디서 찍었지?"});
 })
+app.post('/goTrip/search', (req, res) => {
+    const loc = req.body.search.location;
+
+    res.redirect(`/goTrip/${location[loc]}`);
+})
 app.get('/goTrip/asia', (req, res)=>{
     res.render('trip/asia');
 })
