@@ -21,9 +21,10 @@
     }
     .myPostHeader {
         max-width: 1200px;
-        max-height: 800px;
+        height: 80%;
         display: flex;
         overflow-x: scroll;
+        /* background-color: red; */
     }
     .myPostConatiner {
         display: flex;
@@ -40,10 +41,22 @@
     .myPostHeaderTextArea {
         color: #e9ecef;
     }
+
+    .myPostDeleteBtn {
+        font-size: 13px;
+        font-weight: bold;
+        color:#ff595e;
+        background-color: transparent;
+        border: none;
+    }
+    .myPostImgDiv form {
+        position: relative;
+        left: 90%;
+    }
     .myPostImgDiv img{
         width: 300px;
         height: auto;
-        /* max-height: 200px; */
+        max-height: 250px;
         /* height: 200px; */
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
@@ -58,7 +71,6 @@
 
     .myPostInfoContainer div {
         color: #dee2e6;
-
     }
 }
 
@@ -131,5 +143,8 @@
         color: #dee2e6;
         font-size: 15px;
         /* background-color: aliceblue; */
+    }
+    .myPostDesc {
+        color: red;
     }
 }

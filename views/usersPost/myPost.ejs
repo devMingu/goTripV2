@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="/CSS/myPost.css" />
     <title><%- name %>의 글</title>
 </head>
@@ -16,13 +22,16 @@
             <section class="myPostConatiner">
                 <div class="myPostImgDiv">
                     <img src="<%- el.tripImg %>" alt="">
+                    <form method="POST" action="/goTrip/myPost/<%- el._id %>?_method=DELETE">
+                        <button class="myPostDeleteBtn"><i class="fas fa-trash"></i></button>
+                    </form>
                 </div>
                 <div class="myPostInfoContainer">
                     <div><%- el.tripNickName %></div>
                     <h2>지역은 어딘가요?</h2>
                     <div><%- el.tripLocation %></div>
                     <h2>지역 설명</h2>
-                    <div><%- el.tripDesc %></div>
+                    <div class="myPostDesc"><%- el.tripDesc %></div>
                 </div>
             </section>
             <% } %>

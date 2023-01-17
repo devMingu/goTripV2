@@ -3,6 +3,7 @@ const session = require('express-session');
 const app = express();
 const engine = require('ejs-mate');
 const path = require('path');
+const methodoverride = require("method-override");
 const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const Userdata = require('./model/userModel/userData');
@@ -21,6 +22,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', engine);
 app.use(express.static('public'));
+app.use(methodoverride('_method'));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(session({
@@ -163,6 +165,12 @@ app.get('/goTrip/myPost/:id', async (req, res)=>{
     const userName = await Userdata.find({ _id : id});
     res.render('usersPost/myPost', {data, name: userName[0].userNickName});
 });
+app.delete('/goTrip/myPost/:id', async (req, res) => {
+    const { id } = req.params;
+    const findDelete = await Tripdata.findByIdAndDelete(id);
+    res.redirect(`/goTrip/myPost/${findDelete.userID}`);
+
+})
 app.get('/goTrip/allPost', async (req, res) => {
     const allPost = await Tripdata.find({});
     res.render('usersPost/allUserPost', {allPost});
