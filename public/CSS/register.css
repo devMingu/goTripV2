@@ -1,9 +1,16 @@
 body{
+    display: flex;
+    justify-content: center;
     margin:0;
     font-family: 'Roboto', sans-serif;
 }
 input {
     font-size: 17px;
+}
+.register__outer__container {
+    width: 100%;
+    max-width: 700px;
+
 }
 .register__title_container{
     display: flex;
@@ -11,7 +18,7 @@ input {
     justify-content: space-around;
     align-items: center;
     height: 35vh;
-    box-shadow: 1px 1px 1px 1px rgba(71, 71, 71, 0.1);
+    box-shadow: 1px 2px 1px 3px rgba(71, 71, 71, 0.1);
     /* background-color: bisque; */
 }
 .register__logo{

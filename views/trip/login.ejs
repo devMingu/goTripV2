@@ -14,19 +14,21 @@
     <title>로그인 - GoTrip</title>
   </head>
   <body>
-    <section class="register__input__container">
-      <div>로그인 화면</div>
-      <section class="register__input__box">
-        <form method="POST" action="/goTrip/login">
-          <div class="register__input__box">
-            <label for="email">이메일이 어떻게 되시나요?</label>
-            <input name="user[userEmail]" id="email" type="email" placeholder="이메일을 입력하세요." required/>
-          </div>
-          <p style="color: red"><%- error %></p>
-          <div>
-              <button>로그인하기</button>
+    <section class="register__outer__container">
+      <section class="register__input__container">
+        <div>로그인 화면</div>
+        <section class="register__input__box">
+          <form method="POST" action="/goTrip/login">
+            <div class="register__input__box">
+              <label for="email">이메일이 어떻게 되시나요?</label>
+              <input name="user[userEmail]" id="email" type="email" placeholder="이메일을 입력하세요." required/>
             </div>
-        </form>
+            <p style="color: red"><%- error %></p>
+            <div>
+                <button>로그인하기</button>
+              </div>
+          </form>
+        </section>
       </section>
     </section>
 

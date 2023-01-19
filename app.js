@@ -173,7 +173,8 @@ app.delete('/goTrip/myPost/:id', async (req, res) => {
 })
 app.get('/goTrip/allPost', async (req, res) => {
     const allPost = await Tripdata.find({});
-    res.render('usersPost/allUserPost', {allPost});
+    const loginID = req.session["userID"];
+    res.render('usersPost/allUserPost', {allPost, loginID});
 })
 
 

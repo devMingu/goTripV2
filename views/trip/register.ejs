@@ -14,70 +14,72 @@
     <title>가입하기 - GoTrip</title>
   </head>
   <body>
-    <!-- <div id="map" style="width: 500px; height: 400px"></div> -->
-    <section class="register__title_container">
-      <div class="register__logo">
-        <i class="fab fa-airbnb"></i>
-        <div>GoTrip</div>
-      </div>
-      <div class="register__head__title">가입하고 찾아보세요</div>
-      <div class="register__btn__box">
-        <div class="login__round__box login__postion__box login__facebook">
-          <a class="login_href" href="/goTrip/login">로그인하기</a>
-          <!-- <i class="fab fa-facebook"></i>
-          Facebook으로 가입하기 -->
+    <section class="register__outer__container">
+      <!-- <div id="map" style="width: 500px; height: 400px"></div> -->
+      <section class="register__title_container">
+        <div class="register__logo">
+          <i class="fab fa-airbnb"></i>
+          <div>GoTrip</div>
         </div>
-        <div class="login__round__box login__postion__box login__google">
-          <i class="fab fa-google"></i>
-          회원가입하기
+        <div class="register__head__title">가입하고 찾아보세요</div>
+        <div class="register__btn__box">
+          <div class="login__round__box login__postion__box login__facebook">
+            <a class="login_href" href="/goTrip/login">로그인하기</a>
+            <!-- <i class="fab fa-facebook"></i>
+            Facebook으로 가입하기 -->
+          </div>
+          <div class="login__round__box login__postion__box login__google">
+            <i class="fab fa-google"></i>
+            회원가입하기
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="register__input__container register__input__container__display">
-      <div>이메일 주소로 가입하기</div>
-      <section class="register__input__box">
-        <form method="POST" action="/goTrip">
-          <div class="register__input__box">
-            <label for="userNickName">닉네임을 설정해주세요</label>
-            <input name="user[userNickName]" id="userNickName" type="text" placeholder="닉네임을 입력하세요." required/>
-          </div>
-          <div class="register__input__box">
-            <label for="sex">성별이 어떻게 되시나요?</label>
-            <input name="user[userSex]" id="sex" type="text" placeholder="성별을 입력하세요." required/>
-          </div>
-          <div class="register__input__box">
-            <label class="valueOfAge" for="age">나이가 어떻게 되시나요? <span id="value1">20</span><span>살</span></label>
-            <input name="user[userAge]" id="age" type="range" min="10" max="60" placeholder="나이를 입력하세요." value="20" required oninput="document.getElementById('value1').innerHTML=this.value;"/>
-          </div>
-          <div class="register__input__box">
-            <label for="email">이메일이 어떻게 되시나요?</label>
-            <input name="user[userEmail]" id="email" type="email" placeholder="이메일을 입력하세요." required/>
-          </div>
-          <div class="register__input__box">
-            <label for="profileImg">프로필에 사용할 이미지</label>
-            <input
-              name="user[userProfileImage]"
-              id="profileImg"
-              type="text"
-              placeholder="사진의 주소를 넣어주세요."
-              required
-            />
-          </div>
-          <div class="register__input__box">
-            <label for="country">현재 거주지</label>
-            <input
-              name="user[userCountry]"
-              id="country"
-              type="text"
-              placeholder="거주하는 나라를 입력하세요."
-              required
-            />
-          </div>
-          <div>
-              <button>가입하기</button>
+      </section>
+  
+      <section class="register__input__container register__input__container__display">
+        <div>이메일 주소로 가입하기</div>
+        <section class="register__input__box">
+          <form method="POST" action="/goTrip">
+            <div class="register__input__box">
+              <label for="userNickName">닉네임을 설정해주세요</label>
+              <input name="user[userNickName]" id="userNickName" type="text" placeholder="닉네임을 입력하세요." required/>
             </div>
-        </form>
+            <div class="register__input__box">
+              <label for="sex">성별이 어떻게 되시나요?</label>
+              <input name="user[userSex]" id="sex" type="text" placeholder="성별을 입력하세요." required/>
+            </div>
+            <div class="register__input__box">
+              <label class="valueOfAge" for="age">나이가 어떻게 되시나요? <span id="value1">20</span><span>살</span></label>
+              <input name="user[userAge]" id="age" type="range" min="10" max="60" placeholder="나이를 입력하세요." value="20" required oninput="document.getElementById('value1').innerHTML=this.value;"/>
+            </div>
+            <div class="register__input__box">
+              <label for="email">이메일이 어떻게 되시나요?</label>
+              <input name="user[userEmail]" id="email" type="email" placeholder="이메일을 입력하세요." required/>
+            </div>
+            <div class="register__input__box">
+              <label for="profileImg">프로필에 사용할 이미지</label>
+              <input
+                name="user[userProfileImage]"
+                id="profileImg"
+                type="text"
+                placeholder="사진의 주소를 넣어주세요."
+                required
+              />
+            </div>
+            <div class="register__input__box">
+              <label for="country">현재 거주지</label>
+              <input
+                name="user[userCountry]"
+                id="country"
+                type="text"
+                placeholder="거주하는 나라를 입력하세요."
+                required
+              />
+            </div>
+            <div>
+                <button>가입하기</button>
+              </div>
+          </form>
+        </section>
       </section>
     </section>
 

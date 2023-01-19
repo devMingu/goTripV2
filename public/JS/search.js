@@ -57,18 +57,21 @@ for(let i =0; i<tour.length; i++){
 }
 
 const toRegister = () => {
-    regisLogoutForm.attributes.method.nodeValue = "GET";
-    regisLogoutForm.attributes.action.nodeValue = "/goTrip/register"
+    // console.dir(regisLogoutForm);
+    regisLogoutForm.attributes.method.value = "GET";
+    regisLogoutForm.attributes.action.value = "/goTrip/register"
 }
 
 const toLogout = () => {
-    regisLogoutForm.attributes.method.nodeValue = "POST";
-    regisLogoutForm.attributes.action.nodeValue = "/goTrip/logout";
+    regisLogoutForm.attributes.method.value = "POST";
+    regisLogoutForm.attributes.action.value = "/goTrip/logout";
 }
 
-if (regisLogout.innerText === "회원가입") {
-    toRegister();
-}
-else {
-    toLogout();
-}
+// if (regisLogout.innerText === "회원가입") {
+//     toRegister();
+// }
+// else {
+//     toLogout();
+// }
+
+regisLogout.innerText === "회원가입" ? toRegister() : toLogout();

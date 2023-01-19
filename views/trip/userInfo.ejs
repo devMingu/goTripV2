@@ -51,16 +51,21 @@
       
       <section class="menuOptions">
         <div class="myPost">
+          <a href="/goTrip/recommandTrip">여행 추천하기</a>
+        </div>
+        <div class="myPost">
           <a href="/goTrip/myPost/<%- data._id %>">내가 쓴 글 보러가기</a>
         </div>
         <div class="myPost">
-          <a href="/goTrip/recommandTrip">여행 추천하기</a>
+          <a href="/goTrip/allPost">다른 글 보러가기</a>
         </div>
         <div class="myPost">
           <a href="/goTrip">홈으로</a>
         </div>
         <div class="myPost">
-          <a href="/goTrip/allPost">다른 글 보러가기</a>
+          <form method="POST" action="/goTrip/logout">
+            <button>로그아웃</button>
+          </form>
         </div>
       </section>
     </section>

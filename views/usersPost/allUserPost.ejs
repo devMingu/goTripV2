@@ -10,6 +10,7 @@
 <body>
     <!-- <h1>모든 게시글</h1> -->
     <section class="myPostHeader">
+        <a href="/goTrip/userInfo/<%- loginID %>">내 정보</a>
         <% for (let el of allPost) { %>
             <section class="myPostConatiner">
                 <div class="myPostImgDiv">
@@ -23,8 +24,10 @@
                     <div><%- el.tripDesc %></div>
                 </div>
             </section>
-        <% }%>
+            <% }%>
+        <a href="/goTrip/userInfo/<%- loginID %>">내 정보</a>
     </section>
+    
 
 </body>
 </html>
