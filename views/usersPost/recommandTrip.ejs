@@ -15,48 +15,55 @@
   </head>
   <body>
     <!-- <div id="map" style="width: 500px; height: 400px"></div> -->
-    <section class="register__title_container">
-      <div class="register__logo">
-        <i class="fab fa-airbnb"></i>
-        <div>GoTrip</div>
-      </div>
-      <div class="register__head__title">여행지를 공유해주세요</div>
-      <div class="register__btn__box">
-        <div class="login__round__box login__postion__box login__google">
-          공유하기
-        </div>
-      </div>
-    </section>
+    <section class="register__outer__container">
 
-    <section class="register__input__container register__input__container__display">
-      <section class="register__input__box">
-        <form method="POST" action="/goTrip/recommandTrip">
-          <div class="register__input__box">
-            <label for="tripNickName">여행지에 별명을 붙여주세요</label>
-            <input name="trip[tripNickName]" id="tripNickName" type="text" placeholder="ex) ex. 허스키와 개썰매 타기" required/>
+      <section class="register__title_container">
+        <div class="register__logo">
+          <i class="fab fa-airbnb"></i>
+          <div>GoTrip</div>
+        </div>
+        <div class="register__head__title">여행지를 공유해주세요</div>
+        <div class="register__btn__box">
+          <div class="login__round__box login__postion__box login__google">
+            공유하기
           </div>
-          <div class="register__input__box">
-            <label for="tripLocation">위치가 어딘가요?</label>
-            <input name="trip[tripLocation]" id="tripLocation" type="text" placeholder="성별을 입력하세요." required/>
-          </div>
-          <div class="register__input__box">
-            <label for="tripImg">여행지 이미지를 사진 주소로 넣어주세요</label>
-            <input
-              name="trip[tripImg]"
-              id="tripImg"
-              type="text"
-              placeholder="사진의 주소를 넣어주세요."
-              required
-            />
-          </div>
-          <div class="register__input__box">
-            <label for="tripDesc">여행지에 대해서 알려주세요!</label>
-            <textarea name="trip[tripDesc]" id="tripDesc" cols="30" rows="10"></textarea>
-          </div>
-          <div>
-              <button>등록하기</button>
+        </div>
+      </section>
+  
+      <section class="register__input__container register__input__container__display">
+        <section class="register__input__box">
+          <form method="POST" action="/goTrip/recommandTrip" class="recommandForm" enctype="multipart/form-data">
+            <div class="register__input__box">
+              <label for="tripNickName">여행지에 별명을 붙여주세요</label>
+              <input name="trip[tripNickName]" id="tripNickName" type="text" placeholder="ex) ex. 허스키와 개썰매 타기" required/>
             </div>
-        </form>
+            <div class="register__input__box">
+              <label for="tripLocation">위치가 어딘가요?</label>
+              <input name="trip[tripLocation]" id="tripLocation" type="text" placeholder="성별을 입력하세요." required/>
+            </div>
+            <div class="register__input__box">
+              <label for="tripImg">여행지 이미지를 사진 주소로 넣어주세요</label>
+              <input
+                name="trip[tripImg]"
+                id="tripImg"
+                type="text"
+                placeholder="사진의 주소를 넣어주세요."
+                required
+              />
+            </div>
+            <div class="register__input__box">
+              <label for="tripPhotoPath">파일 업로드</label>
+              <input name="trip[tripPhotoPath]" id="tripPhotoPath" type="file" class="recommandPhoto"/>
+            </div>
+            <div class="register__input__box">
+              <label for="tripDesc">여행지에 대해서 알려주세요!</label>
+              <textarea name="trip[tripDesc]" id="tripDesc" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <button>등록하기</button>
+              </div>
+          </form>
+        </section>
       </section>
     </section>
 

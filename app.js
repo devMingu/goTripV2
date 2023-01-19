@@ -3,6 +3,7 @@ const session = require('express-session');
 const app = express();
 const engine = require('ejs-mate');
 const path = require('path');
+const multer = require('multer');
 const methodoverride = require("method-override");
 const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
@@ -22,6 +23,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', engine);
 app.use(express.static('public'));
+app.use(express.static('uploads'));
 app.use(methodoverride('_method'));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
@@ -31,6 +33,25 @@ app.use(session({
     saveUninitialized: true,
     cookie: { secure: false }
 }))
+
+// 
+const upload = multer({
+    storage: multer.diskStorage({
+      destination(req, file, done) {
+        done(null, 'uploads/');
+      },
+      filename(req, file, done) {
+        const ext = path.extname(file.originalname);
+        const fileName = `${path.basename(
+          file.originalname,
+          ext
+        )}_${Date.now()}${ext}`;
+        done(null, fileName);
+      },
+    }),
+    limits: { fileSize: 5 * 1024 * 1024 },
+  });
+// 
 
 const location = {
     '유럽': 'europe',
@@ -143,21 +164,26 @@ app.get('/goTrip/homeParis', (req, res)=>{
 app.get('/goTrip/recommandTrip', (req, res) => {
     res.render('usersPost/recommandTrip');
 })
-app.post('/goTrip/recommandTrip', async (req, res) => {
+app.post('/goTrip/recommandTrip', upload.single('trip[tripPhotoPath]') ,async (req, res) => {
     console.log(`Now Session is ${req.session["userID"]}`);
+    const filePath = req.file.path.slice(7);
     const getDateData = new Date();
     const date = getDateData.getFullYear().toString() + (getDateData.getMonth()+1).toString() + getDateData.getDate().toString() + getDateData.getHours().toString() + getDateData.getMinutes().toString() + getDateData.getSeconds().toString();
     const postData = {
         userID: req.session["userID"],
         reportingDate: parseInt(date),
         ...req.body.trip,
+        tripPhotoPath: filePath,
     };
     // res.redirect("/goTrip");
     const tripData = new Tripdata(postData);
     await tripData.save();
     // console.log(tripData);
-    
+    // res.render("usersPost/tPost", {pathPhoto: filePath})
     res.redirect(`/goTrip/myPost/${tripData.userID}`);
+})
+app.get('/goTrip/tPost', (req, res) => {
+    res.render("usersPost/tPost");
 })
 app.get('/goTrip/myPost/:id', async (req, res)=>{
     const { id } = req.params;
