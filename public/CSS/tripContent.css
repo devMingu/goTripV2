@@ -9,7 +9,7 @@ a{
     text-decoration: none;
     color:white;
 }
-.tripContentNavBar{
+.tripContentNavBar{ 
     width: 90%;
     display: flex;
     justify-content: space-between;
