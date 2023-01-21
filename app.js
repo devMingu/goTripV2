@@ -166,20 +166,20 @@ app.get('/goTrip/recommandTrip', (req, res) => {
 })
 app.post('/goTrip/recommandTrip', upload.single('trip[tripPhotoPath]') ,async (req, res) => {
     // console.log(`Now Session is ${req.session["userID"]}`);
-    // const filePath = req.file.path.slice(7);
+    const filePath = req.file.path.slice(7);
     const getDateData = new Date();
     const date = getDateData.getFullYear().toString() + (getDateData.getMonth()+1).toString() + getDateData.getDate().toString() + getDateData.getHours().toString() + getDateData.getMinutes().toString() + getDateData.getSeconds().toString();
-    const postData = {
-        userID: req.session["userID"],
-        reportingDate: parseInt(date),
-        ...req.body.trip,
-    };
     // const postData = {
     //     userID: req.session["userID"],
     //     reportingDate: parseInt(date),
     //     ...req.body.trip,
-    //     tripPhotoPath: filePath,
     // };
+    const postData = {
+        userID: req.session["userID"],
+        reportingDate: parseInt(date),
+        ...req.body.trip,
+        tripPhotoPath: filePath,
+    };
     // res.redirect("/goTrip");
     const tripData = new Tripdata(postData);
     await tripData.save();

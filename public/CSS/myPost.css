@@ -57,8 +57,8 @@
     .myPostImgDiv img{
         width: 300px;
         height: auto;
-        max-height: 250px;
-        /* height: 200px; */
+        max-height: 300px;
+        /* max-height: 250px; */
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
