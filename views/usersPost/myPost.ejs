@@ -21,7 +21,7 @@
         <% for (let el of data) { %>
             <section class="myPostConatiner">
                 <div class="myPostImgDiv">
-                    <img src="<%- el.tripImg %>" alt="">
+                    <img src="<%- el.tripPhotoPath %>" alt="">
                     <form method="POST" action="/goTrip/myPost/<%- el._id %>?_method=DELETE">
                         <button class="myPostDeleteBtn"><i class="fas fa-trash"></i></button>
                     </form>

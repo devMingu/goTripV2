@@ -3,13 +3,15 @@ const session = require('express-session');
 const app = express();
 const engine = require('ejs-mate');
 const path = require('path');
+const cloudinary = require('./cloudinary');
 const multer = require('multer');
+const uploader = require('./multer');
 const methodoverride = require("method-override");
 const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const Userdata = require('./model/userModel/userData');
 const Tripdata = require('./model/userModel/userTrip');
-const mongoURL = process.env.MONGODB_URI;
+const mongoURL = process.env.MONGODB_URI || "mongodb+srv://wintermingu12:!Mongodb19971212@dbgotripuser.enhtf48.mongodb.net/test";
 mongoose.connect(mongoURL);
 const db = mongoose.connection;
 
@@ -165,28 +167,41 @@ app.get('/goTrip/recommandTrip', (req, res) => {
     res.render('usersPost/recommandTrip');
 })
 app.post('/goTrip/recommandTrip', upload.single('trip[tripPhotoPath]') ,async (req, res) => {
-    // console.log(`Now Session is ${req.session["userID"]}`);
-    // const filePath = req.file.path.slice(7);
-    const getDateData = new Date();
-    const date = getDateData.getFullYear().toString() + (getDateData.getMonth()+1).toString() + getDateData.getDate().toString() + getDateData.getHours().toString() + getDateData.getMinutes().toString() + getDateData.getSeconds().toString();
+    const savedPhoto = await cloudinary.v2.uploader.upload(req.file.path);
+    // console.log(savedPhoto.url);
+    
     const postData = {
         userID: req.session["userID"],
-        reportingDate: parseInt(date),
         ...req.body.trip,
+        tripPhotoPath: savedPhoto.url,
     };
-    // const postData = {
-    //     userID: req.session["userID"],
-    //     reportingDate: parseInt(date),
-    //     ...req.body.trip,
-    //     tripPhotoPath: filePath,
-    // };
-    // res.redirect("/goTrip");
     const tripData = new Tripdata(postData);
     await tripData.save();
-    // console.log(tripData);
-    // res.render("usersPost/tPost", {pathPhoto: filePath})
     res.redirect(`/goTrip/myPost/${tripData.userID}`);
 })
+// app.post('/goTrip/recommandTrip', upload.single('trip[tripPhotoPath]') ,async (req, res) => {
+//     // console.log(`Now Session is ${req.session["userID"]}`);
+//     // const filePath = req.file.path.slice(7);
+//     const getDateData = new Date();
+//     const date = getDateData.getFullYear().toString() + (getDateData.getMonth()+1).toString() + getDateData.getDate().toString() + getDateData.getHours().toString() + getDateData.getMinutes().toString() + getDateData.getSeconds().toString();
+//     const postData = {
+//         userID: req.session["userID"],
+//         reportingDate: parseInt(date),
+//         ...req.body.trip,
+//     };
+//     // const postData = {
+//     //     userID: req.session["userID"],
+//     //     reportingDate: parseInt(date),
+//     //     ...req.body.trip,
+//     //     tripPhotoPath: filePath,
+//     // };
+//     // res.redirect("/goTrip");
+//     const tripData = new Tripdata(postData);
+//     await tripData.save();
+//     // console.log(tripData);
+//     // res.render("usersPost/tPost", {pathPhoto: filePath})
+//     res.redirect(`/goTrip/myPost/${tripData.userID}`);
+// })
 app.get('/goTrip/tPost', (req, res) => {
     res.render("usersPost/tPost");
 })
