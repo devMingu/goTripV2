@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const Userdata = require('./model/userModel/userData');
 const Tripdata = require('./model/userModel/userTrip');
-const mongoURL = process.env.MONGODB_URI || "mongodb+srv://wintermingu12:!Mongodb19971212@dbgotripuser.enhtf48.mongodb.net/test";
+const mongoURL = process.env.MONGODB_URI;
 mongoose.connect(mongoURL);
 const db = mongoose.connection;
 
