@@ -169,7 +169,7 @@ app.get('/goTrip/recommandTrip', (req, res) => {
 app.post('/goTrip/recommandTrip', upload.single('trip[tripPhotoPath]') ,async (req, res) => {
     // const savedPhoto = await cloudinary.v2.uploader.upload(req.file.path);
     const savedPhoto = await cloudinary.uploader.upload(req.file.path);
-    // console.log(savedPhoto.url);
+    console.log(savedPhoto.url);
     
     const postData = {
         userID: req.session["userID"],
